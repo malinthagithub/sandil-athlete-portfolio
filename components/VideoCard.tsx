@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { athlete, academics, experience, videos } from "@/data/athlete";
 import { SectionTitle } from "@/components/SectionTitle";
-import { VideoCard } from "@/components/VideoCard";
+import VideoCard from "@/components/VideoCard";
 import { ProgressionChart } from "@/components/ProgressionChart";
 import { ResultsTable } from "@/components/ResultsTable";
 import { Manrope } from "next/font/google";
@@ -750,7 +750,7 @@ export default function Home() {
                       <video
                         controls
                         preload="metadata"
-                        poster={video.poster}
+                        
                         className="aspect-video w-full bg-black object-cover"
                       >
                         <source src={video.src} type="video/mp4" />

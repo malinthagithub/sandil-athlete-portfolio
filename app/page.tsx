@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { athlete, academics, experience, videos } from "@/data/athlete";
 import { SectionTitle } from "@/components/SectionTitle";
-import { VideoCard } from "@/components/VideoCard";
+import VideoCard from "@/components/VideoCard";
 import { ProgressionChart } from "@/components/ProgressionChart";
 import { ResultsTable } from "@/components/ResultsTable";
 import { Manrope } from "next/font/google";

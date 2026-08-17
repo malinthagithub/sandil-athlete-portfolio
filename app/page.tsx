@@ -605,7 +605,7 @@ export default function Home() {
                 <video
                   controls
                   preload="metadata"
-                  poster={video.poster}
+                  
                   className="aspect-video w-full bg-black object-cover"
                 >
                   <source src={video.src} type="video/mp4" />

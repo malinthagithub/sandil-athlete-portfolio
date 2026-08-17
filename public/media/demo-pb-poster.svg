@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#861f32"/>
+<line x1="90" y1="130" x2="1190" y2="130" stroke="#c9a45c" stroke-width="4"/>
+<line x1="90" y1="590" x2="1190" y2="590" stroke="#c9a45c" stroke-width="4"/>
+<text x="90" y="390" fill="#f5f1e8" font-family="Arial Narrow, Arial, sans-serif" font-size="190" font-weight="800">2.01 M</text>
+<text x="96" y="500" fill="#f5f1e8" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="8">PERSONAL BEST · DEMO VIDEO</text>
+<text x="96" y="560" fill="#c9a45c" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">REPLACE WITH REAL ATHLETE FOOTAGE</text>
+</svg>

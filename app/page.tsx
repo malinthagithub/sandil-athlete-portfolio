@@ -93,7 +93,7 @@ export default function Home() {
                     tracking-[0.12em]
                     text-white
                     transition-all duration-300
-                    hover:bg-white/10
+                    hover:bg-black/10
                     xl:px-4
                     xl:text-[12px]
                     xl:tracking-[0.15em]

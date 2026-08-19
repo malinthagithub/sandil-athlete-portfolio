@@ -29,7 +29,7 @@ export default function Home() {
       <header className="fixed left-0 right-0 top-0 z-[100] w-full">
         <div className="border-b border-white/10 bg-[#91948F]/80 backdrop-blur-xl">
 
-          <div className="mx-auto flex h-[64px] max-w-[1320px] items-center justify-between gap-3 px-3 sm:h-[70px] sm:px-5 md:px-6 lg:h-[72px] lg:px-8">
+          <div className="mx-auto flex h-[64px] max-w-[1320px] 2xl:max-w-[1680px] items-center justify-between gap-3 px-3 sm:h-[70px] sm:px-5 md:px-6 lg:h-[72px] lg:px-8 2xl:px-10">
 
             {/* BRAND */}
             <a
@@ -59,7 +59,7 @@ export default function Home() {
 
               {/* Athlete */}
               <div className="min-w-0">
-                <p className="truncate font-display text-[11px] font-bold uppercase leading-none tracking-[0.01em] text-white sm:text-[14px] md:text-[15px] lg:text-[17px]">
+                <p className="truncate font-display text-[11px] font-bold uppercase leading-none tracking-[0.01em] text-white sm:text-[14px] md:text-[15px] lg:text-[15px] xl:text-[16px] 2xl:text-[17px]">
                   Sandil Hetti Arachchige
                 </p>
 
@@ -86,17 +86,20 @@ export default function Home() {
                   className="
                     group relative
                     rounded-lg
-                    px-3 py-2.5
-                    text-[10px]
+                    px-2 py-2.5
+                    text-[12px]
                     font-bold
                     uppercase
-                    tracking-[0.12em]
+                    tracking-[0.10em]
+                    xl:px-3
+                    xl:text-[10px]
+                    xl:tracking-[0.12em]
                     text-white
                     transition-all duration-300
                     hover:bg-black/10
-                    xl:px-4
-                    xl:text-[12px]
-                    xl:tracking-[0.15em]
+                    2xl:px-4
+                    2xl:text-[11px]
+                    2xl:tracking-[0.14em]
                   "
                 >
                   {label}
@@ -121,33 +124,63 @@ export default function Home() {
             <div className="flex shrink-0 items-center gap-2 sm:gap-3">
 
               {/* DESKTOP/TABLET CONTACT */}
-              <a
-                href={`mailto:${athlete.email}`}
-                className="
-                  group hidden items-center gap-2
-                  rounded-xl
-                  bg-[#D4AF68]
-                  px-3 py-2.5
-                  text-[8px]
-                  font-bold
-                  uppercase
-                  tracking-[0.12em]
-                  text-[#2F3E4E]
-                  transition-all duration-300
-                  hover:-translate-y-0.5
-                  hover:bg-white
-                  sm:inline-flex
-                  md:px-4
-                  lg:px-5
-                  lg:text-[9px]
-                "
-              >
-                Contact
+              {/* INTERNATIONAL REGISTRATIONS */}
+<div className="hidden items-center gap-1.5 lg:flex xl:gap-2">
 
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
+  {/* NCAA ID */}
+  <div
+    className="
+      flex items-center gap-1.5
+      rounded-lg
+      border border-white/15
+      bg-white/10
+      px-2 py-2
+      backdrop-blur-md
+      xl:rounded-xl
+      xl:px-3 xl:py-2.5
+    "
+  >
+    <span className="text-[7px] font-bold uppercase tracking-[0.08em] text-white xl:text-[9px]">
+      NCAA ID -
+    </span>
+
+    <span className="text-[8px] font-extrabold tracking-[0.02em] text-white xl:text-[10px]">
+      2604884847
+    </span>
+  </div>
+
+
+  {/* WORLD ATHLETICS */}
+  <a
+    href="https://worldathletics.org/athletes/sri-lanka/sandil-dilmeth-hetti-arachchige-15148603"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      group flex items-center gap-1.5
+      rounded-lg
+      border border-[#D4AF68]
+      bg-[#D4AF68]
+      px-2 py-2
+      transition-all duration-300
+      hover:bg-white
+      xl:rounded-xl
+      xl:px-3 xl:py-2.5
+    "
+  >
+    <span className="text-[7px] font-bold uppercase tracking-[0.08em] text-white transition-colors group-hover:text-[#2F3E4E] xl:text-[9px]">
+      World Athletics
+    </span>
+
+    <span className="text-[8px] font-extrabold text-white transition-colors group-hover:text-[#2F3E4E] xl:text-[10px]">
+      15148603
+    </span>
+
+    <span className="text-[8px] text-white transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-[#2F3E4E] xl:text-[10px]">
+      ↗
+    </span>
+  </a>
+
+</div>
 
 
               {/* MOBILE / TABLET MENU */}
@@ -231,208 +264,210 @@ export default function Home() {
           HERO
       ====================================================== */}
       <section
-        id="top"
-        className="relative scroll-mt-20 overflow-hidden border-b border-[#111827]/10 bg-[#F8F6F1]"
-      >
-        <div className="pointer-events-none absolute right-0 top-0 h-[350px] w-[350px] rounded-full bg-[#D4AF68]/10 blur-3xl sm:h-[500px] sm:w-[500px]" />
-
-        <div className="relative mx-auto grid max-w-[1320px] lg:min-h-[720px] lg:grid-cols-[1.05fr_.95fr]">
-
-          {/* LEFT CONTENT */}
-          <div className="flex min-w-0 flex-col justify-between px-5 py-10 sm:px-7 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-20">
-
-            <div>
-
-              {/* CATEGORY */}
-              <div className="flex items-start gap-3 sm:items-center">
-                <span className="mt-1.5 h-[2px] w-7 shrink-0 bg-[#B88A44] sm:mt-0 sm:w-10" />
-
-                <p className="text-[8px] font-bold uppercase leading-5 tracking-[0.16em] text-[#B88A44] sm:text-[9px] md:text-[10px] md:tracking-[0.22em]">
-                  {athlete.event} · {athlete.category} · {athlete.classYear}
-                </p>
-              </div>
-
-
-              {/* NAME */}
-<h1
-  className="
-    mt-6
-    max-w-[850px]
-    font-['Plus_Jakarta_Sans']
-    text-[clamp(1.8rem,4vw,3.8rem)]
-    font-extrabold
-    uppercase
-    leading-[0.9]
-    tracking-[-0.01em]
-    text-[#111827]
-  "
+  id="top"
+  className="relative scroll-mt-20 overflow-hidden border-b border-[#111827]/10 bg-[#F8F6F1]"
 >
-  {/* FIRST LINE */}
-  <span className="block whitespace-nowrap">
-    Sandil Dilmeth
-  </span>
+  <div className="pointer-events-none absolute right-0 top-0 h-[350px] w-[350px] rounded-full bg-[#D4AF68]/10 blur-3xl sm:h-[500px] sm:w-[500px]" />
 
-  {/* SECOND LINE */}
-  <span className="block whitespace-nowrap">
-    <span className="text-[#B88A44]">
-      Hetti Arachchige
-    </span>{" "}
-    
-  </span>
-</h1>
+  <div className="relative mx-auto grid max-w-[1320px] 2xl:max-w-[1680px] lg:min-h-[720px] lg:grid-cols-[1.18fr_.82fr]">
 
+    {/* LEFT CONTENT */}
+    <div className="flex min-w-0 flex-col justify-between px-5 py-10 sm:px-7 sm:py-12 md:px-10 md:py-14 lg:px-10 lg:py-20 xl:px-12">
 
-              {/* DESCRIPTION */}
-              <p className="mt-7 max-w-xl text-sm leading-6 text-[#64748B] sm:text-base sm:leading-7 md:mt-9 md:text-lg">
-                Sri Lankan high jumper combining a{" "}
-                <strong className="font-semibold text-[#111827]">
-                  2.01 m personal best
-                </strong>{" "}
-                with strong Edexcel IAL academics and school leadership.
-              </p>
+      <div>
 
+        {/* CATEGORY */}
+        <div className="flex items-start gap-3 sm:items-center">
+          <span className="mt-1.5 h-[2px] w-7 shrink-0 bg-[#B88A44] sm:mt-0 sm:w-10" />
 
-              {/* CTA */}
-              <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
-                <a
-                  href="#results"
-                  className="
-                    group inline-flex items-center gap-3
-                    rounded-full
-                    bg-[#111827]
-                    px-5 py-3
-                    text-[9px]
-                    font-bold
-                    uppercase
-                    tracking-[0.14em]
-                    text-white
-                    transition-all duration-300
-                    hover:-translate-y-1
-                    hover:bg-[#B88A44]
-                    hover:shadow-lg
-                    sm:px-6 sm:py-3.5 sm:text-[10px]
-                  "
-                >
-                  View Achievements
-
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </div>
-            </div>
-
-
-            {/* STATS */}
-           {/* STATS */}
-<div className="relative mt-8 border-t border-[#111827]/15 pt-5 sm:mt-10 sm:-top-10 sm:pt-5 md:-top-14 lg:-top-20">
-  <div className="grid grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4 sm:gap-x-0 sm:gap-y-0">
-    {[
-      ["PB", `${athlete.personalBest} / ${athlete.personalBestImperial}`],
-      ["Target", athlete.target],
-      ["Class", "2027"],
-      ["Base", athlete.location],
-    ].map(([k, v], index) => (
-      <div
-        key={k}
-        className={`relative min-w-0 ${
-          index !== 0
-            ? "sm:border-l sm:border-[#111827]/10 sm:pl-4 lg:pl-5"
-            : ""
-        }`}
-      >
-        {/* Label */}
-        <p className="text-[7px] font-bold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px] sm:tracking-[0.2em]">
-          {k}
-        </p>
-
-        {/* Value */}
-        <p
-          className={`
-            mt-2
-            break-words
-            font-display
-            font-bold
-            uppercase
-            leading-none
-            tracking-tight
-            text-[#111827]
-            ${
-              k === "Base"
-                ? "text-[11px] sm:text-lg lg:text-xl"
-                : "text-[14px] sm:text-xl lg:text-2xl"
-            }
-          `}
-        >
-          {v}
-        </p>
-
-        {/* Personal Best Badge */}
-        {k === "PB" && (
-          <span className="mt-2 inline-block rounded-full bg-[#B88A44]/10 px-2 py-1 text-[5px] font-bold uppercase tracking-[0.1em] text-[#B88A44] sm:px-2.5 sm:text-[8px]">
-            Personal Best
-          </span>
-        )}
-      </div>
-                ))}
-
-              </div>
-            </div>
-          </div>
-
-
-          {/* RIGHT IMAGE */}
-          <figure className="relative min-h-[430px] overflow-hidden bg-[#111827] sm:min-h-[540px] lg:min-h-full">
-
-            <Image
-              src={athlete.heroPhoto}
-              alt={athlete.heroPhotoAlt}
-              fill
-              priority
-              className="object-cover object-[50%_20%] transition-transform duration-700 hover:scale-[1.02]"
-              sizes="(max-width: 1024px) 100vw, 46vw"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-[#111827]/15 to-transparent" />
-
-
-            {/* TOP BADGE */}
-            <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/20 px-3 py-2 backdrop-blur-md sm:right-5 sm:top-5 md:right-7 md:top-7">
-              <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-white sm:text-[9px] sm:tracking-[0.2em]">
-                Sri Lanka · High Jump
-              </p>
-            </div>
-
-
-            {/* PB */}
-            <div className="absolute bottom-0 left-0 right-0 px-5 pb-6 sm:px-7 sm:pb-7 md:px-8 md:pb-9">
-
-              <div className="mb-4 h-px w-full bg-white/20 sm:mb-5" />
-
-              <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#D4AF68] sm:text-[9px] sm:tracking-[0.2em]">
-                Personal Best · July 2026
-              </p>
-
-              <div className="mt-2 flex flex-wrap items-end gap-2 sm:gap-3">
-
-                <span className="font-['DM_Sans'] text-[4rem] font-bold leading-none tracking-[-0.02em] text-white sm:text-[5.5rem] md:text-[6.5rem] xl:text-[8rem]">
-                  2.01
-                </span>
-
-                <span className="mb-2 font-display text-base font-semibold uppercase tracking-wide text-white/80 sm:mb-3 sm:text-xl md:text-2xl">
-                  metres
-                </span>
-
-              </div>
-
-              <figcaption className="mt-3 max-w-md text-[10px] leading-5 text-white/65 sm:mt-4 sm:text-xs">
-                {athlete.heroPhotoCaption}
-              </figcaption>
-            </div>
-
-          </figure>
+          <p className="text-[8px] font-bold uppercase leading-5 tracking-[0.16em] text-[#B88A44] sm:text-[9px] md:text-[10px] md:tracking-[0.22em]">
+            {athlete.event} · {athlete.category} · {athlete.classYear}
+          </p>
         </div>
-      </section>
+
+
+        {/* NAME */}
+        <h1
+          className="
+            mt-6
+            max-w-[900px]
+            font-['Plus_Jakarta_Sans']
+            text-[clamp(1.8rem,4vw,3.8rem)] 2xl:text-[4.25rem]
+            font-extrabold
+            uppercase
+            leading-[0.9]
+            tracking-[-0.01em]
+            text-[#111827]
+          "
+        >
+          <span className="block whitespace-nowrap">
+            Sandil Dilmeth
+          </span>
+
+          <span className="block whitespace-nowrap text-[#B88A44]">
+            Hetti Arachchige
+          </span>
+        </h1>
+
+
+        {/* DESCRIPTION */}
+        <p className="mt-7 max-w-2xl text-sm leading-6 text-[#64748B] sm:text-base sm:leading-7 md:mt-9 md:text-lg">
+          Beneath the discipline is a kind, grounded heart — one that gives respect freely and earns it in kind.<br />
+  
+          Sri Lankan high jumper combining a{" "}
+          <strong className="font-semibold text-[#111827]">
+            2.01 m personal best
+          </strong>{" "}
+          with strong Edexcel IAL academics and school leadership.
+        </p>
+
+
+        {/* CTA */}
+        <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+          <a
+            href="#results"
+            className="
+              group inline-flex items-center gap-3
+              rounded-full
+              bg-[#111827]
+              px-5 py-3
+              text-[9px]
+              font-bold
+              uppercase
+              tracking-[0.14em]
+              text-white
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:bg-[#B88A44]
+              hover:shadow-lg
+              sm:px-6 sm:py-3.5
+              sm:text-[10px]
+            "
+          >
+            View Achievements
+
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+        </div>
+
+      </div>
+
+
+      {/* STATS */}
+      <div className="relative mt-8 border-t border-[#111827]/15 pt-5 sm:mt-10 sm:-top-10 sm:pt-5 md:-top-14 lg:-top-20">
+
+        <div className="grid grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4 sm:gap-x-0 sm:gap-y-0">
+
+          {[
+            ["PB", `${athlete.personalBest} / ${athlete.personalBestImperial}`],
+            ["Target", athlete.target],
+            ["Class", "2027"],
+            ["Base", athlete.location],
+          ].map(([k, v], index) => (
+            <div
+              key={k}
+              className={`relative min-w-0 ${
+                index !== 0
+                  ? "sm:border-l sm:border-[#111827]/10 sm:pl-4 lg:pl-5"
+                  : ""
+              }`}
+            >
+
+              <p className="text-[7px] font-bold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px] sm:tracking-[0.2em]">
+                {k}
+              </p>
+
+              <p
+                className={`
+                  mt-2
+                  break-words
+                  font-display
+                  font-bold
+                  uppercase
+                  leading-none
+                  tracking-tight
+                  text-[#111827]
+                  ${
+                    k === "Base"
+                      ? "text-[11px] sm:text-lg lg:text-xl"
+                      : "text-[14px] sm:text-xl lg:text-2xl"
+                  }
+                `}
+              >
+                {v}
+              </p>
+
+              {k === "PB" && (
+                <span className="mt-2 inline-block rounded-full bg-[#B88A44]/10 px-2 py-1 text-[5px] font-bold uppercase tracking-[0.1em] text-[#B88A44] sm:px-2.5 sm:text-[8px]">
+                  Personal Best
+                </span>
+              )}
+
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+    </div>
+
+
+    {/* RIGHT IMAGE */}
+    <figure className="relative min-h-[430px] overflow-hidden bg-[#111827] sm:min-h-[540px] lg:min-h-full">
+
+      <Image
+        src={athlete.heroPhoto}
+        alt={athlete.heroPhotoAlt}
+        fill
+        priority
+        className="object-cover object-[50%_16%] transition-transform duration-700 hover:scale-[1.01]"
+        sizes="(max-width: 1024px) 100vw, 40vw"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-[#111827]/15 to-transparent" />
+
+
+      {/* TOP BADGE */}
+      <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/20 px-3 py-2 backdrop-blur-md sm:right-5 sm:top-5 md:right-7 md:top-7">
+        <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-white sm:text-[9px] sm:tracking-[0.2em]">
+          Sri Lanka · High Jump
+        </p>
+      </div>
+
+
+      {/* PB */}
+      <div className="absolute bottom-0 left-0 right-0 px-5 pb-6 sm:px-7 sm:pb-7 md:px-8 md:pb-9">
+
+        <div className="mb-4 h-px w-full bg-white/20 sm:mb-5" />
+
+        <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#D4AF68] sm:text-[9px] sm:tracking-[0.2em]">
+          Personal Best · July 2026
+        </p>
+
+        <div className="mt-2 flex flex-wrap items-end gap-2 sm:gap-3">
+
+          <span className="font-['DM_Sans'] text-[4rem] font-bold leading-none tracking-[-0.02em] text-white sm:text-[5.5rem] md:text-[6.5rem] xl:text-[8rem]">
+            2.01
+          </span>
+
+          <span className="mb-2 font-display text-base font-semibold uppercase tracking-wide text-white/80 sm:mb-3 sm:text-xl md:text-2xl">
+            metres
+          </span>
+
+        </div>
+
+        <figcaption className="mt-3 max-w-md text-[10px] leading-5 text-white/65 sm:mt-4 sm:text-xs">
+          {athlete.heroPhotoCaption}
+        </figcaption>
+
+      </div>
+
+    </figure>
+
+  </div>
+</section>
 
 
       {/* =====================================================
@@ -440,7 +475,7 @@ export default function Home() {
       ====================================================== */}
       <section className="border-b border-line bg-white px-5 py-12 sm:py-14 md:px-8 md:py-20">
 
-        <div className="mx-auto grid max-w-[1320px] gap-8 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] lg:gap-10">
+        <div className="mx-auto grid max-w-[1320px] 2xl:max-w-[1680px] gap-8 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] lg:gap-10">
 
           {/* LEFT */}
           <div>
@@ -490,10 +525,10 @@ export default function Home() {
 
 
           {/* RIGHT */}
-          <div className="min-w-0 max-w-4xl">
+          <div className="min-w-0 max-w-4xl 2xl:max-w-6xl">
 
             <p className="font-display text-2xl font-semibold leading-tight text-[#0F172A] sm:text-3xl md:text-4xl lg:text-5xl">
-              “I compete with none but myself.”
+              “I compete against my best self.”
             </p>
 
             <p className="mt-5 text-sm leading-7 text-slate-600 sm:mt-6 sm:text-base sm:leading-8 md:text-lg">
@@ -516,7 +551,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
       ====================================================== */}
       <section className="border-b border-line bg-gradient-to-t from-[#8F672F]/50 px-4 py-5 sm:px-5 sm:py-6 md:px-8">
 
-        <div className="mx-auto grid max-w-[1320px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-[1320px] 2xl:max-w-[1680px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
 
           {[
             {
@@ -669,7 +704,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
         id="film"
         className="scroll-mt-20 px-4 py-12 sm:px-5 sm:py-16 md:px-8 md:py-24"
       >
-        <div className="mx-auto max-w-[1320px]">
+        <div className="mx-auto max-w-[1320px] 2xl:max-w-[1680px]">
 
           <SectionTitle
             kicker="Recruiting Film"
@@ -784,7 +819,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
                             {video.title}
                           </h4>
 
-                          <p className="mt-3 text-[24px] font-medium leading-6 text-[#64748B] sm:text-[20px]">
+                          <p className="mt-3 text-[11px] font-medium leading-5 text-[#64748B] sm:text-[12px] sm:leading-6">
   {video.meta}
 </p>
 
@@ -864,7 +899,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
         <div className="pointer-events-none absolute bottom-[-120px] left-[-100px] h-[360px] w-[360px] rounded-full bg-[#B88A44]/5 blur-[90px]" />
 
 
-        <div className="relative mx-auto max-w-[1320px]">
+        <div className="relative mx-auto max-w-[1320px] 2xl:max-w-[1680px]">
 
           {/* INTRO */}
           <div className="grid gap-6 md:gap-8 lg:grid-cols-[170px_1fr]">
@@ -1278,7 +1313,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
   <div className="pointer-events-none absolute -left-32 bottom-10 h-[240px] w-[240px] rounded-full bg-[#111827]/5 blur-3xl sm:h-[280px] sm:w-[280px]" />
 
 
-  <div className="relative mx-auto max-w-[1320px]">
+  <div className="relative mx-auto max-w-[1320px] 2xl:max-w-[1680px]">
 
     <SectionTitle
       kicker="Student Athlete"
@@ -1549,39 +1584,38 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
           </div>
 
 
-          <div className="mt-4">
+          <div className="mt-4 flex flex-wrap gap-2">
+  {/* Transcript */}
+  
 
-            {athlete.transcriptUrl ? (
-
-              <a
-                href={athlete.transcriptUrl}
-                className="
-                  inline-flex items-center gap-2
-                  rounded-full
-                  bg-[#111827]
-                  px-4 py-2.5
-                  text-[8px] font-bold uppercase
-                  tracking-[0.13em]
-                  text-white
-                  transition-all duration-300
-                  hover:-translate-y-0.5
-                  hover:bg-[#B88A44]
-                  sm:text-[9px]
-                "
-              >
-                View Transcript
-                <span>→</span>
-              </a>
-
-            ) : (
-
-              <span className="inline-flex rounded-full border border-[#111827]/10 bg-[#F8F6F1] px-3.5 py-2.5 text-[8px] font-bold uppercase tracking-[0.12em] text-[#64748B] sm:px-4 sm:text-[9px]">
-                Transcript link to be added
-              </span>
-
-            )}
-
-          </div>
+  {/* Certificate */}
+  {athlete.certificateUrl && (
+    <a
+      href={athlete.certificateUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        inline-flex items-center gap-2
+        rounded-full
+        border border-[#111827]/20
+        bg-transparent
+        px-4 py-2.5
+        text-[8px] font-bold uppercase
+        tracking-[0.13em]
+        text-[#111827]
+        transition-all duration-300
+        hover:-translate-y-0.5
+        hover:border-[#B88A44]
+        hover:bg-[#B88A44]
+        hover:text-white
+        sm:text-[9px]
+      "
+    >
+      View Sport Certificate
+      <span>→</span>
+    </a>
+  )}
+</div>
 
         </div>
 
@@ -1737,7 +1771,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
         <div className="pointer-events-none absolute -right-24 top-[-100px] h-[300px] w-[300px] rounded-full bg-[#D4AF68]/15 blur-[100px] sm:h-[360px] sm:w-[360px]" />
 
 
-        <div className="relative mx-auto max-w-[1320px]">
+        <div className="relative mx-auto max-w-[1320px] 2xl:max-w-[1680px]">
 
           {/* LABEL */}
           <div className="flex items-center gap-3">
@@ -1777,32 +1811,34 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
               <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-8 sm:gap-3">
 
                 <a
-                  href={`mailto:${athlete.email}`}
-                  className="
-                    group inline-flex items-center gap-2.5
-                    rounded-full
-                    bg-[#D4AF68]
-                    px-4 py-2.5
-                    text-[8px]
-                    font-extrabold
-                    uppercase
-                    tracking-[0.12em]
-                    text-[#3F101B]
-                    transition-all duration-300
-                    hover:-translate-y-0.5
-                    hover:bg-white
-                    hover:shadow-lg
-                    sm:gap-3
-                    sm:px-5 sm:py-3
-                    sm:text-[10px]
-                  "
-                >
-                  Send Email
+  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${athlete.email}&su=Recruitment Inquiry - Sandil Hetti Arachchige`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    group inline-flex items-center gap-2.5
+    rounded-full
+    bg-[#D4AF68]
+    px-4 py-2.5
+    text-[8px]
+    font-extrabold
+    uppercase
+    tracking-[0.12em]
+    text-[#3F101B]
+    transition-all duration-300
+    hover:-translate-y-0.5
+    hover:bg-white
+    hover:shadow-lg
+    sm:gap-3
+    sm:px-5 sm:py-3
+    sm:text-[10px]
+  "
+>
+  Send Email
 
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</a>
 
 
                 <a
@@ -1853,12 +1889,13 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
                 </p>
 
                 <a
-                  href={`mailto:${athlete.email}`}
-                  className="mt-2 block break-all text-[13px] font-bold tracking-[-0.01em] text-white transition-colors hover:text-[#E3C17A] sm:text-[15px] md:text-[17px]"
-                >
-                  {athlete.email}
-                </a>
-
+  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${athlete.email}&su=Recruitment Inquiry - Sandil Hetti Arachchige`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-2 block break-all text-[13px] font-bold tracking-[-0.01em] text-white transition-colors hover:text-[#E3C17A] sm:text-[15px] md:text-[17px]"
+>
+  {athlete.email}
+</a>
               </div>
 
 

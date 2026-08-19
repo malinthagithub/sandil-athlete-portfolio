@@ -26,7 +26,8 @@ export const athlete = {
   email: "dilmethsandil@gmail.com",
   phone: "+94 74 040 0241",
   whatsapp: "https://wa.me/94740400241",
-  transcriptUrl: "",
+   transcriptUrl: "/media/transcript.pdf",
+  certificateUrl: "/media/Sandil_Athletics_Certificates.pdf",
 };
 
 export const academics = [
@@ -93,6 +94,12 @@ export const videos = [
     
   },
   {
+    title: " International Combo athletics championship-2026",
+    meta: "1st place · 1.95 M",
+    src: "/media/l12.mp4",
+    
+  },
+  {
     title: "ISAC CHAMPIONSHIPS-2025",
     meta: "1st Place · 1.87M",
     src: "/media/l6.mp4",
@@ -141,28 +148,23 @@ export const videos = [
     src: "/media/demo-reel.mp4",
    
   },
-  
   {
-    title: "CHAMPIONSHIPS-OLD",
-    meta: "CHAMPIONSHIPS-OLD",
-    src: "/media/l8.mp4",
-    
-  },
-  {
-    title: "CHAMPIONSHIPS-OLD",
-    meta: "CHAMPIONSHIPS-OLD",
+    title: "PRACTICE SESSION-RECENT ",
+    meta: "PRACTICE SESSION",
     src: "/media/l9.mp4",
     
   },
   {
-    title: "CHAMPIONSHIPS-OLD",
-    meta: "CHAMPIONSHIPS-OLD",
-    src: "/media/l10.mp4",
+    title: "PRACTICE SESSION-SMALL AGE ",
+    meta: "PRACTICE SESSION",
+    src: "/media/l8.mp4",
     
   },
+  
+  
   {
-    title: "CHAMPIONSHIPS-OLD",
-    meta: "CHAMPIONSHIPS-OLD",
+    title: "PRACTICE SESSION-PRACTICE SESSION-SMALL AGE",
+    meta: "PRACTICE SESSION",
     src: "/media/l11.mp4",
     
   },

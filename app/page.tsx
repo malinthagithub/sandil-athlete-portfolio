@@ -27,7 +27,7 @@ export default function Home() {
           NAVBAR
       ====================================================== */}
       <header className="fixed left-0 right-0 top-0 z-[100] w-full">
-        <div className="border-b border-white/10 bg-[#91948F]/70 backdrop-blur-xl">
+        <div className="border-b border-white/10 bg-[#91948F]/80 backdrop-blur-xl">
 
           <div className="mx-auto flex h-[64px] max-w-[1320px] items-center justify-between gap-3 px-3 sm:h-[70px] sm:px-5 md:px-6 lg:h-[72px] lg:px-8">
 
@@ -254,35 +254,32 @@ export default function Home() {
 
 
               {/* NAME */}
-              <h1
-                className="
-                  mt-6
-                  max-w-[850px]
-                  break-words
-                  font-['Plus_Jakarta_Sans']
-                  text-[3.2rem]
-                  font-extrabold
-                  uppercase
-                  leading-[0.82]
-                  tracking-[0.005em]
-                  text-[#111827]
-                  sm:text-[4.5rem]
-                  md:text-[5.6rem]
-                  lg:text-[6rem]
-                  xl:text-[7.5rem]
-                "
-              >
-                Sandil
-                <br />
+<h1
+  className="
+    mt-6
+    max-w-[850px]
+    font-['Plus_Jakarta_Sans']
+    text-[clamp(1.8rem,4vw,3.8rem)]
+    font-extrabold
+    uppercase
+    leading-[0.9]
+    tracking-[-0.01em]
+    text-[#111827]
+  "
+>
+  {/* FIRST LINE */}
+  <span className="block whitespace-nowrap">
+    Sandil Dilmeth
+  </span>
 
-                <span className="text-[#B88A44]">
-                  Hetti
-                </span>
-
-                <br />
-
-                Arachchige
-              </h1>
+  {/* SECOND LINE */}
+  <span className="block whitespace-nowrap">
+    <span className="text-[#B88A44]">
+      Hetti Arachchige
+    </span>{" "}
+    
+  </span>
+</h1>
 
 
               {/* DESCRIPTION */}
@@ -327,53 +324,56 @@ export default function Home() {
 
 
             {/* STATS */}
-            <div className="mt-10 border-t border-[#111827]/15 pt-6 sm:mt-12 md:mt-14 md:pt-7">
+           {/* STATS */}
+<div className="relative mt-8 border-t border-[#111827]/15 pt-5 sm:mt-10 sm:-top-10 sm:pt-5 md:-top-14 lg:-top-20">
+  <div className="grid grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4 sm:gap-x-0 sm:gap-y-0">
+    {[
+      ["PB", `${athlete.personalBest} / ${athlete.personalBestImperial}`],
+      ["Target", athlete.target],
+      ["Class", "2027"],
+      ["Base", athlete.location],
+    ].map(([k, v], index) => (
+      <div
+        key={k}
+        className={`relative min-w-0 ${
+          index !== 0
+            ? "sm:border-l sm:border-[#111827]/10 sm:pl-4 lg:pl-5"
+            : ""
+        }`}
+      >
+        {/* Label */}
+        <p className="text-[7px] font-bold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px] sm:tracking-[0.2em]">
+          {k}
+        </p>
 
-              <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-4 sm:gap-x-0">
+        {/* Value */}
+        <p
+          className={`
+            mt-2
+            break-words
+            font-display
+            font-bold
+            uppercase
+            leading-none
+            tracking-tight
+            text-[#111827]
+            ${
+              k === "Base"
+                ? "text-[11px] sm:text-lg lg:text-xl"
+                : "text-[14px] sm:text-xl lg:text-2xl"
+            }
+          `}
+        >
+          {v}
+        </p>
 
-                {[
-                  ["PB", `${athlete.personalBest} / ${athlete.personalBestImperial}`],
-                  ["Target", athlete.target],
-                  ["Class", "2027"],
-                  ["Base", athlete.location],
-                ].map(([k, v], index) => (
-                  <div
-                    key={k}
-                    className={`relative min-w-0 ${
-                      index !== 0
-                        ? "sm:border-l sm:border-[#111827]/10 sm:pl-4 lg:pl-5"
-                        : ""
-                    }`}
-                  >
-                    <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#64748B] sm:text-[9px] sm:tracking-[0.2em]">
-                      {k}
-                    </p>
-
-                    <p
-                      className={`
-                        mt-2
-                        break-words
-                        font-display
-                        font-bold
-                        uppercase
-                        tracking-tight
-                        text-[#111827]
-                        ${
-                          k === "Base"
-                            ? "text-base sm:text-lg lg:text-xl"
-                            : "text-xl sm:text-xl lg:text-2xl"
-                        }
-                      `}
-                    >
-                      {v}
-                    </p>
-
-                    {k === "PB" && (
-                      <span className="mt-2 inline-block rounded-full bg-[#B88A44]/10 px-2 py-1 text-[7px] font-bold uppercase tracking-[0.12em] text-[#B88A44] sm:px-2.5 sm:text-[8px]">
-                        Personal Best
-                      </span>
-                    )}
-                  </div>
+        {/* Personal Best Badge */}
+        {k === "PB" && (
+          <span className="mt-2 inline-block rounded-full bg-[#B88A44]/10 px-2 py-1 text-[5px] font-bold uppercase tracking-[0.1em] text-[#B88A44] sm:px-2.5 sm:text-[8px]">
+            Personal Best
+          </span>
+        )}
+      </div>
                 ))}
 
               </div>
@@ -440,7 +440,7 @@ export default function Home() {
       ====================================================== */}
       <section className="border-b border-line bg-white px-5 py-12 sm:py-14 md:px-8 md:py-20">
 
-        <div className="mx-auto grid max-w-[1320px] gap-8 md:grid-cols-[210px_1fr] lg:grid-cols-[240px_1fr] lg:gap-10">
+        <div className="mx-auto grid max-w-[1320px] gap-8 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] lg:gap-10">
 
           {/* LEFT */}
           <div>
@@ -450,15 +450,32 @@ export default function Home() {
 
 
             {/* IMAGE */}
-            <div className="relative mt-5 aspect-[4/5] w-full max-w-[180px] overflow-hidden rounded-2xl border border-[#0F172A]/10 bg-[#F8F6F1] shadow-[0_12px_30px_rgba(15,23,42,0.08)] sm:mt-7 sm:max-w-[210px]">
+            {/* IMAGE */}
+<div
+  className="
+    relative
+    mt-5
+    aspect-[4/5]
+    w-full
+    max-w-[250px]
+    overflow-hidden
+    rounded-2xl
+    border border-[#0F172A]/10
+    bg-[#F8F6F1]
+    shadow-[0_12px_30px_rgba(15,23,42,0.08)]
+    sm:mt-7
+    sm:max-w-[280px]
+    lg:max-w-[300px]
+  "
+>
+  <Image
+    src="/media/WhatsApp Image 2026-08-19 at 08.08.18.jpeg"
+    alt="Sandil Hetti Arachchige"
+    fill
+    className="object-cover object-[20%_20%] transition-transform duration-500 hover:scale-[1.03]"
+    sizes="(max-width: 640px) 250px, (max-width: 1024px) 280px, 300px"
+  />
 
-              <Image
-                src="/media/news.jpeg"
-                alt="Sandil Hetti Arachchige"
-                fill
-                className="object-cover object-top transition-transform duration-500 hover:scale-[1.03]"
-                sizes="210px"
-              />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
@@ -480,19 +497,13 @@ export default function Home() {
             </p>
 
             <p className="mt-5 text-sm leading-7 text-slate-600 sm:mt-6 sm:text-base sm:leading-8 md:text-lg">
-              That mindset has driven every leap since I first stepped onto a
-              track at age nine. For nearly a decade, high jump has shaped how
-              I organise my life — a minimum of five training sessions a week,
-              maintained through exam seasons, competitions, and a full
-              academic timetable.
+              That mindset has driven every leap since I first stepped onto a track at nine. For nearly a decade, high jump has shaped how I organise my life — a minimum of five training sessions a week, sustained through exam seasons, competition travel, and a full academic timetable.
+
             </p>
 
             <p className="mt-4 text-sm leading-7 text-slate-600 sm:mt-5 sm:text-base sm:leading-8 md:text-lg">
-              That discipline is the thread tying together the two things I
-              care about most: my sport and my studies. I have refused to let
-              either come at the expense of the other. My ambition is to bring
-              that same standard of excellence, competitive grit, and
-              discipline to a top-tier Division I program.
+              That discipline is the thread tying together the two things I care about most: my sport and my studies. I've refused to let either come at the expense of the other. 
+My ambition is to compete at NCAA Division I level while reading for a competitive undergraduate degree in Business and Finance — carrying the same standard of excellence, competitive grit, and discipline from the high-jump apron into the classroom and, ultimately, a professional career. I know what it takes to earn improvement one centimetre at a time, and I intend to bring that same relentlessness to both.
             </p>
 
           </div>
@@ -773,9 +784,9 @@ export default function Home() {
                             {video.title}
                           </h4>
 
-                          <p className="mt-3 text-[10px] font-medium leading-5 text-[#64748B] sm:text-[11px]">
-                            {video.meta}
-                          </p>
+                          <p className="mt-3 text-[24px] font-medium leading-6 text-[#64748B] sm:text-[20px]">
+  {video.meta}
+</p>
 
                         </div>
 
@@ -1254,296 +1265,444 @@ export default function Home() {
       {/* =====================================================
           ACADEMICS
       ====================================================== */}
-      <section
-        id="academics"
-        className={`${manrope.className} relative scroll-mt-20 overflow-hidden bg-[#F8F6F1] px-4 py-12 sm:px-5 sm:py-14 md:px-8 md:py-20`}
-      >
+      {/* =====================================================
+    ACADEMICS
+====================================================== */}
+<section
+  id="academics"
+  className={`${manrope.className} relative scroll-mt-20 overflow-hidden bg-[#F8F6F1] px-4 py-12 sm:px-5 sm:py-14 md:px-8 md:py-20`}
+>
 
-        <div className="pointer-events-none absolute -right-20 top-20 h-[300px] w-[300px] rounded-full bg-[#D4AF68]/10 blur-3xl sm:h-[360px] sm:w-[360px]" />
+  <div className="pointer-events-none absolute -right-20 top-20 h-[300px] w-[300px] rounded-full bg-[#D4AF68]/10 blur-3xl sm:h-[360px] sm:w-[360px]" />
 
-        <div className="pointer-events-none absolute -left-32 bottom-10 h-[240px] w-[240px] rounded-full bg-[#111827]/5 blur-3xl sm:h-[280px] sm:w-[280px]" />
+  <div className="pointer-events-none absolute -left-32 bottom-10 h-[240px] w-[240px] rounded-full bg-[#111827]/5 blur-3xl sm:h-[280px] sm:w-[280px]" />
 
 
-        <div className="relative mx-auto max-w-[1320px]">
+  <div className="relative mx-auto max-w-[1320px]">
 
-          <SectionTitle
-            kicker="Student Athlete"
-            title="Academic strength matters too."
-            description="Strong academic performance, leadership responsibility, and professional experience alongside competitive high jump."
-          />
+    <SectionTitle
+      kicker="Student Athlete"
+      title="Academic strength matters too."
+      description="Strong academic performance, leadership responsibility, and professional experience alongside competitive high jump."
+    />
 
 
-          <div className="mt-8 grid gap-5 sm:mt-10 sm:gap-6 lg:grid-cols-2">
+    <div className="mt-8 grid gap-5 sm:mt-10 sm:gap-6 lg:grid-cols-2">
 
-            {/* ACADEMICS */}
-            <div className="min-w-0 overflow-hidden rounded-[18px] border border-[#111827]/10 bg-white shadow-[0_16px_45px_rgba(17,24,39,0.06)] sm:rounded-[22px]">
+      {/* =====================================================
+          ACADEMICS
+      ====================================================== */}
+      <div className="min-w-0 overflow-hidden rounded-[18px] border border-[#111827]/10 bg-white shadow-[0_16px_45px_rgba(17,24,39,0.06)] sm:rounded-[22px]">
 
-              {/* HEADER */}
-              <div className="flex items-center justify-between gap-4 border-b border-[#111827]/10 px-4 py-4 sm:px-5 sm:py-5 md:px-7">
+        {/* HEADER */}
+        <div className="flex items-center justify-between gap-4 border-b border-[#111827]/10 px-4 py-4 sm:px-5 sm:py-5 md:px-7">
 
-                <div className="min-w-0">
+          <div className="min-w-0">
 
-                  <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#B88A44] sm:text-[9px] sm:tracking-[0.2em]">
-                    Academic Record
-                  </p>
+            <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#B88A44] sm:text-[9px] sm:tracking-[0.2em]">
+              Academic Record
+            </p>
 
-                  <h3 className="mt-1.5 text-xl font-extrabold uppercase tracking-[-0.02em] text-[#111827] sm:text-2xl md:text-3xl">
-                    Qualifications
-                  </h3>
+            <h3 className="mt-1.5 text-xl font-extrabold uppercase tracking-[-0.02em] text-[#111827] sm:text-2xl md:text-3xl">
+              Qualifications
+            </h3>
 
-                </div>
+          </div>
 
 
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#B88A44]/10 text-[#B88A44] sm:h-10 sm:w-10">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#B88A44]/10 text-[#B88A44] sm:h-10 sm:w-10">
 
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-4 w-4"
-                  >
-                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z" />
-                    <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5A2.5 2.5 0 0 1 20 21.5v-16Z" />
-                  </svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              className="h-4 w-4"
+            >
+              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z" />
+              <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5A2.5 2.5 0 0 1 20 21.5v-16Z" />
+            </svg>
 
-                </div>
-              </div>
-
-
-              {/* ITEMS */}
-              <div className="px-4 sm:px-5 md:px-7">
-
-                {academics.map((item, index) => (
-                  <div
-                    key={item.subject}
-                    className="group grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-[#111827]/10 py-4 sm:gap-5 sm:py-5"
-                  >
-
-                    <div className="flex min-w-0 gap-2.5 sm:gap-3">
-
-                      <span className="mt-0.5 shrink-0 text-[9px] font-bold text-[#B88A44]/55 sm:text-[11px]">
-                        0{index + 1}
-                      </span>
-
-
-                      <div className="min-w-0">
-
-                        <h4 className="break-words text-sm font-extrabold uppercase leading-tight tracking-[-0.01em] text-[#111827] transition-colors duration-300 group-hover:text-[#B88A44] sm:text-lg md:text-xl">
-                          {item.subject}
-                        </h4>
-
-                        <p className="mt-1 text-[9px] font-medium leading-4 text-[#64748B] sm:mt-1.5 sm:text-[11px] sm:leading-5">
-                          {item.board}
-                        </p>
-
-                        {item.status === "AS" && (
-                          <span className="mt-2 inline-flex rounded-full bg-[#111827]/5 px-2 py-1 text-[7px] font-bold uppercase tracking-[0.12em] text-[#64748B] sm:px-2.5 sm:text-[8px]">
-                            AS Level
-                          </span>
-                        )}
-
-                      </div>
-                    </div>
-
-
-                    {/* GRADE */}
-                    <div
-                      className={`
-                        flex min-h-[44px] min-w-[48px]
-                        shrink-0 items-center justify-center
-                        rounded-lg
-                        px-2
-                        !text-[11px]
-                        font-extrabold
-                        leading-none
-                        sm:min-h-[50px]
-                        sm:min-w-[54px]
-                        sm:rounded-xl
-                        sm:!text-[12px]
-                        ${
-                          item.grade === "A*"
-                            ? "bg-[#B88A44] text-white"
-                            : item.grade === "A"
-                            ? "bg-[#111827] text-white"
-                            : "bg-[#F1EEE7] text-[#64748B]"
-                        }
-                      `}
-                    >
-                      {item.grade}
-                    </div>
-
-                  </div>
-                ))}
-
-              </div>
-
-
-              {/* SUMMARY */}
-              <div className="px-4 pb-5 pt-4 sm:px-5 sm:pb-6 sm:pt-5 md:px-7">
-
-                <div className="rounded-xl border border-[#B88A44]/20 bg-[#B88A44]/5 p-3.5 sm:p-4">
-
-                  <div className="flex gap-3">
-
-                    <div className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B88A44]" />
-
-                    <p className="text-[10px] leading-5 text-[#64748B] sm:text-[12px] sm:leading-6">
-                      <strong className="font-semibold text-[#111827]">
-                        IAL Mathematics complete with A*.
-                      </strong>{" "}
-                      AS Economics awarded A. Full IAL Economics and Further
-                      Mathematics are scheduled for the 2027 examination
-                      series.
-                    </p>
-
-                  </div>
-                </div>
-
-
-                <div className="mt-4">
-
-                  {athlete.transcriptUrl ? (
-                    <a
-                      href={athlete.transcriptUrl}
-                      className="
-                        inline-flex items-center gap-2
-                        rounded-full
-                        bg-[#111827]
-                        px-4 py-2.5
-                        text-[8px] font-bold uppercase
-                        tracking-[0.13em]
-                        text-white
-                        transition-all duration-300
-                        hover:-translate-y-0.5
-                        hover:bg-[#B88A44]
-                        sm:text-[9px]
-                      "
-                    >
-                      View Transcript
-                      <span>→</span>
-                    </a>
-                  ) : (
-                    <span className="inline-flex rounded-full border border-[#111827]/10 bg-[#F8F6F1] px-3.5 py-2.5 text-[8px] font-bold uppercase tracking-[0.12em] text-[#64748B] sm:px-4 sm:text-[9px]">
-                      Transcript link to be added
-                    </span>
-                  )}
-
-                </div>
-              </div>
-
-            </div>
-
-
-            {/* LEADERSHIP */}
-            <div className="min-w-0 overflow-hidden rounded-[18px] bg-[#111827] text-white shadow-[0_16px_45px_rgba(17,24,39,0.14)] sm:rounded-[22px]">
-
-              {/* HEADER */}
-              <div className="flex items-center justify-between gap-4 border-b border-white/10 px-4 py-4 sm:px-5 sm:py-5 md:px-7">
-
-                <div className="min-w-0">
-
-                  <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#D4AF68] sm:text-[9px] sm:tracking-[0.2em]">
-                    Beyond Competition
-                  </p>
-
-                  <h3 className="mt-1.5 text-xl font-extrabold uppercase tracking-[-0.02em] text-white sm:text-2xl md:text-3xl">
-                    Leadership & Experience
-                  </h3>
-
-                </div>
-
-
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#D4AF68] sm:h-10 sm:w-10">
-
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    className="h-4 w-4"
-                  >
-                    <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9L12 16.5l-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" />
-                  </svg>
-
-                </div>
-              </div>
-
-
-              {/* EXPERIENCE */}
-              <div className="px-4 sm:px-5 md:px-7">
-
-                {experience.map((item, i) => (
-                  <article
-                    key={item.title}
-                    className="group grid grid-cols-[40px_minmax(0,1fr)] gap-3 border-b border-white/10 py-4 sm:grid-cols-[48px_minmax(0,1fr)] sm:gap-4 sm:py-5"
-                  >
-
-                    <div
-                      className="
-                        flex h-9 w-9 items-center justify-center
-                        rounded-full
-                        border border-[#D4AF68]/25
-                        bg-[#D4AF68]/10
-                        text-xs font-bold
-                        text-[#D4AF68]
-                        transition-all duration-300
-                        group-hover:bg-[#D4AF68]
-                        group-hover:text-[#111827]
-                        sm:h-10 sm:w-10 sm:text-sm
-                      "
-                    >
-                      0{i + 1}
-                    </div>
-
-
-                    <div className="min-w-0">
-
-                      <h4 className="break-words text-sm font-extrabold uppercase leading-tight tracking-[-0.01em] text-white transition-colors duration-300 group-hover:text-[#D4AF68] sm:text-lg md:text-xl">
-                        {item.title}
-                      </h4>
-
-                      <p className="mt-1.5 text-[10px] font-semibold text-white/80 sm:text-[12px]">
-                        {item.organisation}
-                      </p>
-
-                      <p className="mt-2 max-w-lg text-[10px] leading-5 text-white/55 sm:text-[11px]">
-                        {item.detail}
-                      </p>
-
-                      <div className="mt-3 h-px w-8 bg-[#D4AF68] transition-all duration-500 group-hover:w-16 sm:mt-4" />
-
-                    </div>
-
-                  </article>
-                ))}
-
-              </div>
-
-
-              {/* NOTE */}
-              <div className="px-4 py-4 sm:px-5 sm:py-5 md:px-7">
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3.5 sm:p-4">
-
-                  <p className="text-[7px] font-bold uppercase tracking-[0.15em] text-[#D4AF68] sm:text-[8px] sm:tracking-[0.18em]">
-                    Student Athlete
-                  </p>
-
-                  <p className="mt-2 text-[10px] leading-5 text-white/55 sm:text-[12px] sm:leading-6">
-                    Competitive sport, academic performance, leadership, and
-                    professional experience reflect a consistent commitment to
-                    disciplined development.
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
           </div>
         </div>
-      </section>
+
+
+        {/* =====================================================
+            EDEXCEL IAL
+        ====================================================== */}
+        <div className="px-4 pt-5 sm:px-5 sm:pt-6 md:px-7">
+
+          <div className="flex items-center gap-3 border-b border-[#B88A44]/20 pb-3">
+
+            <span className="h-[2px] w-6 shrink-0 bg-[#B88A44]" />
+
+            <div>
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-lg md:text-xl">
+  Edexcel IAL
+</p>
+
+<p className="mt-1 text-[9px] font-medium text-[#64748B] sm:text-[10px] md:text-[11px]">
+  International Advanced Level
+</p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* IAL SUBJECTS */}
+        <div className="px-4 sm:px-5 md:px-7">
+
+          {academics
+            .filter((item) => item.subject !== "O-Levels")
+            .map((item, index) => (
+
+              <div
+                key={item.subject}
+                className="group grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-[#111827]/10 py-4 sm:gap-5 sm:py-5"
+              >
+
+                <div className="flex min-w-0 gap-2.5 sm:gap-3">
+
+                  <span className="mt-0.5 shrink-0 text-[9px] font-bold text-[#B88A44]/55 sm:text-[11px]">
+                    0{index + 1}
+                  </span>
+
+
+                  <div className="min-w-0">
+
+                    <h4 className="break-words text-[12px] font-bold uppercase leading-tight tracking-[-0.01em] text-[#111827] transition-colors duration-300 group-hover:text-[#B88A44] sm:text-[13px] md:text-[14px]">
+  {item.subject}
+</h4>
+
+
+                    <p className="mt-1 text-[9px] font-medium leading-4 text-[#64748B] sm:mt-1.5 sm:text-[11px] sm:leading-5">
+                      {item.board}
+                    </p>
+
+
+                    {item.status === "AS" && (
+
+                      <span className="mt-2 inline-flex rounded-full bg-[#111827]/5 px-2 py-1 text-[7px] font-bold uppercase tracking-[0.12em] text-[#64748B] sm:px-2.5 sm:text-[8px]">
+                        AS Level
+                      </span>
+
+                    )}
+
+                  </div>
+                </div>
+
+
+                {/* GRADE */}
+             {/* GRADE */}
+<div
+  className={`
+    flex shrink-0 items-center justify-center
+    rounded-full
+    border
+    px-3 py-2
+    text-[9px]
+    font-extrabold
+    leading-none
+    shadow-sm
+    transition-all duration-300
+    sm:px-4
+    sm:py-2.5
+    sm:text-[11px]
+    ${
+      item.grade === "A*"
+        ? "border-[#000000] bg-[#000000] text-[#FFFFFF]"
+        : item.grade === "A"
+        ? "border-[#000000] bg-[#000000] text-[#FFFFFF]"
+        : "border-[#64748B]/15 bg-[#F1EEE7] text-[#64748B]"
+    }
+  `}
+>
+  {item.grade}
+</div>
+
+              </div>
+
+            ))}
+
+        </div>
+
+
+        {/* =====================================================
+            EDEXCEL IGCSE
+        ====================================================== */}
+        <div className="px-4 pt-6 sm:px-5 sm:pt-7 md:px-7">
+
+          <div className="flex items-center gap-3 border-b border-[#B88A44]/20 pb-3">
+
+            <span className="h-[2px] w-6 shrink-0 bg-[#B88A44]" />
+
+            <div>
+
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-lg md:text-xl ">
+  Edexcel IGCSE
+</p>
+
+              <p className="mt-1 text-[9px] font-medium text-[#64748B] sm:text-[10px]">
+                International General Certificate of Secondary Education
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* IGCSE RECORD */}
+        <div className="px-4 sm:px-5 md:px-7">
+
+          <div className="group grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-[#111827]/10 py-4 sm:gap-5 sm:py-5">
+
+            <div className="flex min-w-0 gap-2.5 sm:gap-3">
+
+              <span className="mt-0.5 shrink-0 text-[9px] font-bold text-[#B88A44]/55 sm:text-[11px]">
+                01
+              </span>
+
+
+              <div className="min-w-0">
+
+                <h4 className="break-words text-sm font-extrabold uppercase leading-tight tracking-[-0.01em] text-[#111827] transition-colors duration-300 group-hover:text-[#B88A44] sm:text-[13px] md:text-[14px]">
+                  Edexcel IGCSE
+                </h4>
+
+                <p className="mt-1 text-[9px] font-medium leading-4 text-[#64748B] sm:mt-1.5 sm:text-[11px] sm:leading-5">
+                  Completed · Certificate available
+                </p>
+
+              </div>
+
+            </div>
+
+
+            {/* FULL RECORD BUTTON */}
+            <a
+  href="/media/Sandil_IGCSE_Certificate.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    group/button
+    flex min-h-[44px]
+    min-w-[78px]
+    shrink-0
+    items-center
+    justify-center
+    gap-1.5
+    rounded-lg
+    bg-[#F1EEE7]
+    px-3
+    text-[9px]
+    font-extrabold
+    text-[#64748B]
+    transition-all
+    duration-300
+    hover:bg-[#B88A44]
+    hover:text-white
+    sm:min-h-[50px]
+    sm:min-w-[88px]
+    sm:rounded-xl
+    sm:text-[10px]
+  "
+>
+  Full Record
+
+  <span className="transition-transform duration-300 group-hover/button:translate-x-0.5">
+    ↗
+  </span>
+</a>
+
+          </div>
+
+        </div>
+
+
+        {/* SUMMARY */}
+        <div className="px-4 pb-5 pt-4 sm:px-5 sm:pb-6 sm:pt-5 md:px-7">
+
+          <div className="rounded-xl border border-[#B88A44]/20 bg-[#B88A44]/5 p-3.5 sm:p-4">
+
+            <div className="flex gap-3">
+
+              <div className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B88A44]" />
+
+              <p className="text-[10px] leading-5 text-[#64748B] sm:text-[12px] sm:leading-6">
+
+                <strong className="font-semibold text-[#111827]">
+                  IAL Mathematics complete with A*.
+                </strong>{" "}
+
+                AS Economics awarded A. Full IAL Economics and Further
+                Mathematics are scheduled for the 2027 examination
+                series.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div className="mt-4">
+
+            {athlete.transcriptUrl ? (
+
+              <a
+                href={athlete.transcriptUrl}
+                className="
+                  inline-flex items-center gap-2
+                  rounded-full
+                  bg-[#111827]
+                  px-4 py-2.5
+                  text-[8px] font-bold uppercase
+                  tracking-[0.13em]
+                  text-white
+                  transition-all duration-300
+                  hover:-translate-y-0.5
+                  hover:bg-[#B88A44]
+                  sm:text-[9px]
+                "
+              >
+                View Transcript
+                <span>→</span>
+              </a>
+
+            ) : (
+
+              <span className="inline-flex rounded-full border border-[#111827]/10 bg-[#F8F6F1] px-3.5 py-2.5 text-[8px] font-bold uppercase tracking-[0.12em] text-[#64748B] sm:px-4 sm:text-[9px]">
+                Transcript link to be added
+              </span>
+
+            )}
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
+          LEADERSHIP
+      ====================================================== */}
+      <div className="min-w-0 overflow-hidden rounded-[18px] bg-[#111827] text-white shadow-[0_16px_45px_rgba(17,24,39,0.14)] sm:rounded-[22px]">
+
+        {/* HEADER */}
+        <div className="flex items-center justify-between gap-4 border-b border-white/10 px-4 py-4 sm:px-5 sm:py-5 md:px-7">
+
+          <div className="min-w-0">
+
+            <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#D4AF68] sm:text-[9px] sm:tracking-[0.2em]">
+              Beyond Competition
+            </p>
+
+            <h3 className="mt-1.5 text-xl font-extrabold uppercase tracking-[-0.02em] text-white sm:text-2xl md:text-3xl">
+              Leadership & Experience
+            </h3>
+
+          </div>
+
+
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#D4AF68] sm:h-10 sm:w-10">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              className="h-4 w-4"
+            >
+              <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9L12 16.5l-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" />
+            </svg>
+
+          </div>
+
+        </div>
+
+
+        {/* EXPERIENCE */}
+        <div className="px-4 sm:px-5 md:px-7">
+
+          {experience.map((item, i) => (
+
+            <article
+              key={item.title}
+              className="group grid grid-cols-[40px_minmax(0,1fr)] gap-3 border-b border-white/10 py-4 sm:grid-cols-[48px_minmax(0,1fr)] sm:gap-4 sm:py-5"
+            >
+
+              <div
+                className="
+                  flex h-9 w-9 items-center justify-center
+                  rounded-full
+                  border border-[#D4AF68]/25
+                  bg-[#D4AF68]/10
+                  text-xs font-bold
+                  text-[#D4AF68]
+                  transition-all duration-300
+                  group-hover:bg-[#D4AF68]
+                  group-hover:text-[#111827]
+                  sm:h-10 sm:w-10 sm:text-sm
+                "
+              >
+                0{i + 1}
+              </div>
+
+
+              <div className="min-w-0">
+
+                <h4 className="break-words text-sm font-extrabold uppercase leading-tight tracking-[-0.01em] text-white transition-colors duration-300 group-hover:text-[#D4AF68] sm:text-lg md:text-xl">
+                  {item.title}
+                </h4>
+
+                <p className="mt-1.5 text-[10px] font-semibold text-white/80 sm:text-[12px]">
+                  {item.organisation}
+                </p>
+
+                <p className="mt-2 max-w-lg text-[10px] leading-5 text-white/55 sm:text-[11px]">
+                  {item.detail}
+                </p>
+
+                <div className="mt-3 h-px w-8 bg-[#D4AF68] transition-all duration-500 group-hover:w-16 sm:mt-4" />
+
+              </div>
+
+            </article>
+
+          ))}
+
+        </div>
+
+
+        {/* NOTE */}
+        <div className="px-4 py-4 sm:px-5 sm:py-5 md:px-7">
+
+          <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3.5 sm:p-4">
+
+            <p className="text-[7px] font-bold uppercase tracking-[0.15em] text-[#D4AF68] sm:text-[8px] sm:tracking-[0.18em]">
+              Student Athlete
+            </p>
+
+            <p className="mt-2 text-[10px] leading-5 text-white/55 sm:text-[12px] sm:leading-6">
+              Competitive sport, academic performance, leadership, and
+              professional experience reflect a consistent commitment to
+              disciplined development.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
       {/* =====================================================

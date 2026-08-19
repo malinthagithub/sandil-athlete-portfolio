@@ -87,57 +87,83 @@ export const videos = [
     "Sandil Hetti Arachchige holding his championship trophy and medal",
 },
   {
-    title: "2.00 m Junior National",
-    meta: "Junior National · June 2026 · 3rd place",
+    title: " Junior National championship-2026",
+    meta: "3rd place · 2.0 M",
     src: "/media/demo-junior-national.mp4",
     
   },
   {
-    title: "Competition Reel",
-    meta: "Approach · take-off · clearance sequence",
-    src: "/media/demo-reel.mp4",
-   
-  },
-  {
-    title: "Competition Highlights",
-    meta: "Selected Attempts · 2024–2026",
-    src: "/media/l7.mp4",
+    title: "ISAC CHAMPIONSHIPS-2025",
+    meta: "1st Place · 1.87M",
+    src: "/media/l6.mp4",
     
   },
   {
-    title: "Competition Highlights",
-    meta: "Selected Attempts · 2024–2026",
-    src: "/media/l1.mp4",
-    
-  },
-  {
-    title: "Competition Highlights",
-    meta: "Selected Attempts · 2024–2026",
-    src: "/media/l2.mp4",
-    
-  },
-  {
-    title: "Competition Highlights",
-    meta: "Selected Attempts · 2024–2026",
-    src: "/media/l3.mp4",
-    
-  },
-  {
-    title: "Competition Highlights",
-    meta: "Selected Attempts · 2024–2026",
-    src: "/media/l4.mp4",
-    
-  },
-  {
-    title: "Competition Highlights",
-    meta: "Selected Attempts · 2024–2026",
+    title: "SENIOR TARBET CHAMPIONSHIPS-2024",
+    meta: "3rd Place · 1.88M",
     src: "/media/l5.mp4",
     
   },
   {
-    title: "Competition Highlights",
-    meta: "Selected Attempts · 2024–2026",
-    src: "/media/l6.mp4",
+    title: "JUNIOR NATIONAL CHAMPIONSHIPS-2024",
+    meta: "3rd Place · 1.90M",
+    src: "/media/l4.mp4",
+    
+  },
+{
+    title: "WESTERN PROVINCE CHAMPIONSHIPS-2024",
+    meta: "2nd Place · 1.90M",
+    src: "/media/l3.mp4",
+    
+  },
+  {
+    title: "ALL ISLAND SCHOOLS-2022",
+    meta: "2nd Place · 1.74M",
+    src: "/media/l2.mp4",
+    
+  },
+  {
+    title: "JUNIOR TARBET CHAMPIONSHIPS-2022",
+    meta: "2nd Place · 1.73M",
+    src: "/media/l1.mp4",
+    
+  },
+  
+  {
+    title: "ALL ISLAND SCHOOLS-2021 ",
+    meta: "2nd Place · 1.93M",
+    src: "/media/l7.mp4",
+    
+  },
+  {
+    title: "2019 ISAC Meet ",
+    meta: "1st Place · 1.35M",
+    src: "/media/demo-reel.mp4",
+   
+  },
+  
+  {
+    title: "CHAMPIONSHIPS-OLD",
+    meta: "CHAMPIONSHIPS-OLD",
+    src: "/media/l8.mp4",
+    
+  },
+  {
+    title: "CHAMPIONSHIPS-OLD",
+    meta: "CHAMPIONSHIPS-OLD",
+    src: "/media/l9.mp4",
+    
+  },
+  {
+    title: "CHAMPIONSHIPS-OLD",
+    meta: "CHAMPIONSHIPS-OLD",
+    src: "/media/l10.mp4",
+    
+  },
+  {
+    title: "CHAMPIONSHIPS-OLD",
+    meta: "CHAMPIONSHIPS-OLD",
+    src: "/media/l11.mp4",
     
   },
 ];

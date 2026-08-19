@@ -135,8 +135,8 @@ export default function VideoCard({
               Sandil Hetti Arachchige
             </p>
 
-            <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.13em] text-white/65">
-              High Jump · Sri Lanka · Class of 2027
+            <p className="mt-2 font-display text-xl font uppercase leading-tight text-white sm:text-2xl">
+              International Schools Athletic Competition 2019
             </p>
           </div>
         </figure>

@@ -163,7 +163,7 @@ export const videos = [
   
   
   {
-    title: "PRACTICE SESSION-PRACTICE SESSION-SMALL AGE",
+    title: "PRACTICE SESSION-SMALL AGE",
     meta: "PRACTICE SESSION",
     src: "/media/l11.mp4",
     

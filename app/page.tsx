@@ -140,13 +140,13 @@ export default function Home() {
       xl:px-3 xl:py-2.5
     "
   >
-    <span className="text-[7px] font-bold uppercase tracking-[0.08em] text-white xl:text-[9px]">
-      NCAA ID -
-    </span>
+    <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-white xl:text-[14px]"> 
+  NCAA ID - 
+</span> 
 
-    <span className="text-[8px] font-extrabold tracking-[0.02em] text-white xl:text-[10px]">
-      2604884847
-    </span>
+<span className="text-[14px] font-extrabold tracking-[0.02em] text-white xl:text-[14px]"> 
+  2604884847 
+</span>
   </div>
 
 
@@ -167,13 +167,13 @@ export default function Home() {
       xl:px-3 xl:py-2.5
     "
   >
-    <span className="text-[7px] font-bold uppercase tracking-[0.08em] text-white transition-colors group-hover:text-[#2F3E4E] xl:text-[9px]">
-      World Athletics
-    </span>
+    <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-white transition-colors group-hover:text-[#2F3E4E] xl:text-[12px]"> 
+  World Athletics 
+</span> 
 
-    <span className="text-[8px] font-extrabold text-white transition-colors group-hover:text-[#2F3E4E] xl:text-[10px]">
-      15148603
-    </span>
+<span className="text-[14px] font-extrabold text-white transition-colors group-hover:text-[#2F3E4E] xl:text-[13px]"> 
+  15148603 
+</span>
 
     <span className="text-[8px] text-white transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-[#2F3E4E] xl:text-[10px]">
       ↗
@@ -574,9 +574,11 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
             },
 
             {
-              label: "Academics",
+              label: " IAL Academics",
               title: "Mathematics A*",
-              detail: "AS Economics A",
+            
+              detail: "Economics A",
+               sameStyle: true,
               icon: (
                 <svg
                   viewBox="0 0 24 24"
@@ -595,6 +597,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
               label: "Leadership",
               title: "Athletic Captain",
               detail: "Investment Society Secretary",
+              sameStyle: true,
               icon: (
                 <svg
                   viewBox="0 0 24 24"
@@ -675,13 +678,19 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
 
               <div className="mt-6 sm:mt-7">
 
-                <h3 className="break-words font-display text-xl font-bold uppercase leading-none text-ink sm:text-2xl md:text-3xl">
-                  {item.title}
-                </h3>
+                <h3 className="break-words font-display text-lg font-bold uppercase leading-none text-ink sm:text-xl md:text-2xl">
+  {item.title}
+</h3>
 
-                <p className="mt-3 text-[11px] font-semibold leading-5 text-slate sm:min-h-[40px] sm:text-xs">
-                  {item.detail}
-                </p>
+               <p
+  className={
+    item.sameStyle
+      ? "mt-3 break-words font-display text-lg font-bold uppercase leading-none text-ink sm:text-xl md:text-2xl"
+      : "mt-3 text-[11px] font-semibold leading-5 text-slate sm:min-h-[40px] sm:text-xs"
+  }
+>
+  {item.detail}
+</p>
 
               </div>
 
@@ -1638,121 +1647,40 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
 
 
        {/* SPORT CERTIFICATE DROPDOWN */}
-{(athlete.certificateUrl || athlete.newCertificateUrl) && (
-  <details className="group mt-6 sm:mt-7">
+{athlete.certificateUrl && (
+  <a
+    href={athlete.certificateUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      mt-6
+      inline-flex
+      cursor-pointer
+      items-center
+      gap-2
+      rounded-full
+      border border-[#111827]/20
+      bg-transparent
+      px-4 py-2.5
+      text-[8px]
+      font-bold
+      uppercase
+      tracking-[0.13em]
+      text-[#111827]
+      transition-all
+      duration-300
+      hover:-translate-y-0.5
+      hover:border-[#B88A44]
+      hover:bg-[#B88A44]
+      hover:text-white
+      sm:mt-7
+      sm:text-[9px]
+    "
+  >
+    View Sport Certificate
 
-    <summary
-      className="
-        inline-flex
-        cursor-pointer
-        list-none
-        items-center
-        gap-2
-        rounded-full
-        border border-[#111827]/20
-        bg-transparent
-        px-4 py-2.5
-        text-[8px]
-        font-bold
-        uppercase
-        tracking-[0.13em]
-        text-[#111827]
-        transition-all
-        duration-300
-        hover:-translate-y-0.5
-        hover:border-[#B88A44]
-        hover:bg-[#B88A44]
-        hover:text-white
-        sm:text-[9px]
-        [&::-webkit-details-marker]:hidden
-      "
-    >
-      View Sport Certificate
-
-      <span className="transition-transform duration-300 group-open:rotate-180">
-        ↓
-      </span>
-    </summary>
-
-
-    {/* DROPDOWN */}
-    <div
-      className="
-        mt-4
-        w-full
-        max-w-[320px]
-        overflow-hidden
-        rounded-xl
-        border border-[#111827]/10
-        bg-white
-        p-2
-        shadow-[0_12px_30px_rgba(17,24,39,0.12)]
-      "
-    >
-
-      {/* OLD CERTIFICATES */}
-      {athlete.certificateUrl && (
-        <a
-          href={athlete.certificateUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex
-            items-center
-            justify-between
-            rounded-lg
-            px-3 py-3
-            text-[9px]
-            font-bold
-            uppercase
-            tracking-[0.08em]
-            text-[#111827]
-            transition-all
-            duration-300
-            hover:bg-[#F8F6F1]
-            hover:text-[#B88A44]
-          "
-        >
-          Athletics Certificates
-
-          <span>↗</span>
-        </a>
-      )}
-
-
-      {/* NEW 2.06 M CERTIFICATE */}
-      {athlete.newCertificateUrl && (
-        <a
-          href={athlete.newCertificateUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            mt-1
-            flex
-            items-center
-            justify-between
-            rounded-lg
-            px-3 py-3
-            text-[9px]
-            font-bold
-            uppercase
-            tracking-[0.08em]
-            text-[#111827]
-            transition-all
-            duration-300
-            hover:bg-[#F8F6F1]
-            hover:text-[#B88A44]
-          "
-        >
-          2.06 m ·Personal Best · 2026
-
-          <span>↗</span>
-        </a>
-      )}
-
-    </div>
-
-  </details>
+    <span>↗</span>
+  </a>
 )}
 
         </div>

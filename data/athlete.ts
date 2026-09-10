@@ -31,7 +31,7 @@ export const athlete = {
     "Sandil Dilmeth Hetti Arachchige holding the champion's trophy and gold medal at the Western Province Zonal School Meet, 2026",
 
   heroPhotoCaption:
-    "Western Province School Meet · High Jump Champion · 2026",
+    "Western Province School Meet · High Jump  · 2026",
 
   // CONTACT
   email: "dilmethsandil@gmail.com",

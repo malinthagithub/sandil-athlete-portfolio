@@ -443,7 +443,7 @@ export default function Home() {
         <div className="mb-4 h-px w-full bg-white/20 sm:mb-5" />
 
         <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#D4AF68] sm:text-[9px] sm:tracking-[0.2em]">
-          Personal Best · July 2026
+          Personal Best · september 2026
         </p>
 
         <div className="mt-2 flex flex-wrap items-end gap-2 sm:gap-3">

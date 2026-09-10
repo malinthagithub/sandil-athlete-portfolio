@@ -316,7 +316,7 @@ export default function Home() {
   
           Sri Lankan high jumper combining a{" "}
           <strong className="font-semibold text-[#111827]">
-            2.01 m personal best
+            2.06 m personal best
           </strong>{" "}
           with strong Edexcel IAL academics and school leadership.
         </p>
@@ -449,7 +449,7 @@ export default function Home() {
         <div className="mt-2 flex flex-wrap items-end gap-2 sm:gap-3">
 
           <span className="font-['DM_Sans'] text-[4rem] font-bold leading-none tracking-[-0.02em] text-white sm:text-[5.5rem] md:text-[6.5rem] xl:text-[8rem]">
-            2.01
+            2.06
           </span>
 
           <span className="mb-2 font-display text-base font-semibold uppercase tracking-wide text-white/80 sm:mb-3 sm:text-xl md:text-2xl">
@@ -557,7 +557,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
             {
               label: "Event",
               title: "High Jump",
-              detail: "PB 2.01 m · Target 2.05 m",
+              detail: "PB 2.06 m · Target 2.10 m",
               icon: (
                 <svg
                   viewBox="0 0 24 24"
@@ -867,434 +867,487 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
       </section>
 
 
-      {/* =====================================================
-          RESULTS
-      ====================================================== */}
-      <section
-        id="results"
-        className={`${manrope.className} relative scroll-mt-20 overflow-hidden border-y border-[#111827]/10 bg-[#F8F6F1] px-4 py-12 text-[#111827] sm:px-5 sm:py-16 md:px-8 md:py-24`}
-      >
+     {/* =====================================================
+    RESULTS
+====================================================== */}
+<section
+  id="results"
+  className={`${manrope.className} relative scroll-mt-20 overflow-hidden border-y border-[#111827]/10 bg-[#F8F6F1] px-4 py-12 text-[#111827] sm:px-5 sm:py-16 md:px-8 md:py-24`}
+>
 
-        {/* BACKGROUND */}
-        <div className="pointer-events-none absolute inset-0">
+  {/* BACKGROUND */}
+  <div className="pointer-events-none absolute inset-0">
 
-          <Image
-            src="/media/sandil-champion.jpg"
-            alt=""
-            fill
-            className="object-cover object-[50%_25%] opacity-[0.28]"
-            sizes="100vw"
-          />
+    <Image
+      src="/media/sandil-champion.jpg"
+      alt=""
+      fill
+      className="object-cover object-[50%_25%] opacity-[0.28]"
+      sizes="100vw"
+    />
 
-          {/* IMPORTANT: TRANSPARENT NOW */}
-          <div className="absolute inset-0 bg-[#F7E6D7]/80" />
+    <div className="absolute inset-0 bg-[#F7E6D7]/80" />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-[#F8F6F1]/80" />
+    <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-[#F8F6F1]/80" />
+
+  </div>
+
+
+  {/* DECORATION */}
+  <div className="pointer-events-none absolute right-[-140px] top-[-120px] h-[420px] w-[420px] rounded-full bg-[#D4AF68]/10 blur-[90px]" />
+
+  <div className="pointer-events-none absolute bottom-[-120px] left-[-100px] h-[360px] w-[360px] rounded-full bg-[#B88A44]/5 blur-[90px]" />
+
+
+  <div className="relative mx-auto max-w-[1320px] 2xl:max-w-[1680px]">
+
+    {/* =====================================================
+        INTRO
+    ====================================================== */}
+    <div className="grid gap-6 md:gap-8 lg:grid-cols-[170px_1fr]">
+
+      {/* LEFT LABEL */}
+      <div>
+
+        <div className="flex items-center gap-3">
+
+          <span className="h-[2px] w-8 bg-[#B88A44]" />
+
+          <p className="text-[9px] font-extrabold uppercase tracking-[0.16em] text-[#B88A44] sm:text-[10px] sm:tracking-[0.18em]">
+            Performance
+          </p>
 
         </div>
 
 
-        <div className="pointer-events-none absolute right-[-140px] top-[-120px] h-[420px] w-[420px] rounded-full bg-[#D4AF68]/10 blur-[90px]" />
+        <p className="mt-3 max-w-[220px] text-[10px] font-medium leading-5 text-[#64748B] sm:mt-4 sm:text-[11px] lg:max-w-[140px]">
+          Competition progression from 2022 to 2026.
+        </p>
 
-        <div className="pointer-events-none absolute bottom-[-120px] left-[-100px] h-[360px] w-[360px] rounded-full bg-[#B88A44]/5 blur-[90px]" />
+      </div>
 
 
-        <div className="relative mx-auto max-w-[1320px] 2xl:max-w-[1680px]">
+      {/* INTRO CONTENT */}
+      <div className="min-w-0">
 
-          {/* INTRO */}
-          <div className="grid gap-6 md:gap-8 lg:grid-cols-[170px_1fr]">
+        <h2 className="max-w-4xl text-3xl font-extrabold leading-[1.05] tracking-[-0.04em] text-[#111827] sm:text-4xl md:text-5xl">
 
-            <div>
-              <div className="flex items-center gap-3">
+          From 1.63 m to{" "}
 
-                <span className="h-[2px] w-8 bg-[#B88A44]" />
+          <span className="relative inline-block text-[#B88A44]">
 
-                <p className="text-[9px] font-extrabold uppercase tracking-[0.16em] text-[#B88A44] sm:text-[10px] sm:tracking-[0.18em]">
-                  Performance
-                </p>
+            2.06 m
 
-              </div>
+            <span className="absolute -bottom-1.5 left-0 h-[3px] w-full rounded-full bg-[#D4AF68]/35" />
 
-              <p className="mt-3 max-w-[220px] text-[10px] font-medium leading-5 text-[#64748B] sm:mt-4 sm:text-[11px] lg:max-w-[140px]">
-                Competition progression from 2022 to 2026.
-              </p>
-            </div>
+          </span>
 
 
-            <div className="min-w-0">
+          <span className="mt-4 block text-2xl font-semibold tracking-[-0.025em] text-[#64748B] sm:text-3xl md:text-4xl">
+            The progression is the story.
+          </span>
 
-              <h2 className="max-w-4xl text-3xl font-extrabold leading-[1.05] tracking-[-0.04em] text-[#111827] sm:text-4xl md:text-5xl">
+        </h2>
 
-                From 1.63 m to{" "}
 
-                <span className="relative inline-block text-[#B88A44]">
-                  2.01 m
+        <p className="mt-5 max-w-2xl text-xs font-medium leading-6 text-[#64748B] sm:mt-6 sm:text-sm sm:leading-7 md:text-[15px]">
+          Recorded competition performances from August 2022 to 2026,
+          showing consistent development from 1.63 m to a current personal
+          best of 2.06 m at the Western Province School Games 2026, with
+          the next target set at 2.10 m.
+        </p>
 
-                  <span className="absolute -bottom-1.5 left-0 h-[3px] w-full rounded-full bg-[#D4AF68]/35" />
-                </span>
+      </div>
 
+    </div>
 
-                <span className="mt-4 block text-2xl font-semibold tracking-[-0.025em] text-[#64748B] sm:text-3xl md:text-4xl">
-                  The progression is the story.
-                </span>
 
-              </h2>
+    {/* =====================================================
+        PERFORMANCE CARDS
+    ====================================================== */}
+    <div className="mt-9 grid grid-cols-1 gap-3 min-[430px]:grid-cols-2 sm:mt-12 sm:gap-4 lg:grid-cols-4">
 
+      {/* PERSONAL BEST */}
+      <article className="group relative overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B88A44]/40 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
 
-              <p className="mt-5 max-w-2xl text-xs font-medium leading-6 text-[#64748B] sm:mt-6 sm:text-sm sm:leading-7 md:text-[15px]">
-                Recorded competition performances from August 2022 to July
-                2026, showing consistent development toward a current target
-                of 2.05 m.
-              </p>
+        <div className="absolute left-0 top-0 h-full w-[3px] bg-[#B88A44]" />
 
-            </div>
-          </div>
 
+        <div className="flex items-start justify-between">
 
-          {/* PERFORMANCE CARDS */}
-          <div className="mt-9 grid grid-cols-1 gap-3 min-[430px]:grid-cols-2 sm:mt-12 sm:gap-4 lg:grid-cols-4">
+          <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px] sm:tracking-[0.16em]">
+            Personal Best
+          </p>
 
-            {/* PB */}
-            <article className="group relative overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B88A44]/40 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#B88A44]/10 text-sm font-bold text-[#B88A44]">
+            ↑
+          </span>
 
-              <div className="absolute left-0 top-0 h-full w-[3px] bg-[#B88A44]" />
+        </div>
 
-              <div className="flex items-start justify-between">
 
-                <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px] sm:tracking-[0.16em]">
-                  Personal Best
-                </p>
+        <div className="mt-4 flex items-end gap-2 sm:mt-5">
 
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#B88A44]/10 text-sm font-bold text-[#B88A44]">
-                  ↑
-                </span>
+          <span className="tabular-nums text-[34px] font-extrabold leading-none tracking-[-0.05em] text-[#111827] sm:text-[40px]">
+            2.06
+          </span>
 
-              </div>
+          <span className="mb-1 text-[10px] font-extrabold uppercase text-[#B88A44] sm:text-[11px]">
+            m
+          </span>
 
-              <div className="mt-4 flex items-end gap-2 sm:mt-5">
+        </div>
 
-                <span className="tabular-nums text-[34px] font-extrabold leading-none tracking-[-0.05em] text-[#111827] sm:text-[40px]">
-                  2.01
-                </span>
 
-                <span className="mb-1 text-[10px] font-extrabold uppercase text-[#B88A44] sm:text-[11px]">
-                  m
-                </span>
+        <div className="mt-4 border-t border-[#111827]/10 pt-3 sm:mt-5">
 
-              </div>
+          <p className="text-[9px] font-semibold leading-4 text-[#64748B] sm:text-[10px]">
+            Western Province School Games · 2026
+          </p>
 
-              <div className="mt-4 border-t border-[#111827]/10 pt-3 sm:mt-5">
-                <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
-                  July 2026
-                </p>
-              </div>
+        </div>
 
-            </article>
+      </article>
 
 
-            {/* TARGET */}
-            <article className="group relative overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B88A44]/40 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
+      {/* CURRENT TARGET */}
+      <article className="group relative overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B88A44]/40 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
 
-              <div className="absolute left-0 top-0 h-full w-[3px] bg-[#D4AF68]/65" />
+        <div className="absolute left-0 top-0 h-full w-[3px] bg-[#D4AF68]/65" />
 
-              <div className="flex items-start justify-between">
 
-                <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px]">
-                  Current Target
-                </p>
+        <div className="flex items-start justify-between">
 
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#B88A44]/10 text-sm font-bold text-[#B88A44]">
-                  ◎
-                </span>
+          <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px]">
+            Current Target
+          </p>
 
-              </div>
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#B88A44]/10 text-sm font-bold text-[#B88A44]">
+            ◎
+          </span>
 
-              <div className="mt-4 flex items-end gap-2 sm:mt-5">
+        </div>
 
-                <span className="tabular-nums text-[34px] font-extrabold leading-none tracking-[-0.05em] text-[#111827] sm:text-[40px]">
-                  2.05
-                </span>
 
-                <span className="mb-1 text-[10px] font-extrabold uppercase text-[#B88A44] sm:text-[11px]">
-                  m
-                </span>
+        <div className="mt-4 flex items-end gap-2 sm:mt-5">
 
-              </div>
+          <span className="tabular-nums text-[34px] font-extrabold leading-none tracking-[-0.05em] text-[#111827] sm:text-[40px]">
+            2.10
+          </span>
 
-              <div className="mt-4 border-t border-[#111827]/10 pt-3 sm:mt-5">
-                <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
-                  Next milestone
-                </p>
-              </div>
+          <span className="mb-1 text-[10px] font-extrabold uppercase text-[#B88A44] sm:text-[11px]">
+            m
+          </span>
 
-            </article>
+        </div>
 
 
-            {/* PROGRESSION */}
-            <article className="group relative overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B88A44]/40 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
+        <div className="mt-4 border-t border-[#111827]/10 pt-3 sm:mt-5">
 
-              <div className="absolute left-0 top-0 h-full w-[3px] bg-[#D4AF68]/65" />
+          <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
+            Next milestone
+          </p>
 
-              <div className="flex items-start justify-between">
+        </div>
 
-                <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px]">
-                  Progression
-                </p>
+      </article>
 
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#B88A44]/10 text-sm font-bold text-[#B88A44]">
-                  ↗
-                </span>
 
-              </div>
+      {/* PROGRESSION */}
+      <article className="group relative overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#B88A44]/40 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
 
-              <div className="mt-4 flex items-end gap-2 sm:mt-5">
+        <div className="absolute left-0 top-0 h-full w-[3px] bg-[#D4AF68]/65" />
 
-                <span className="tabular-nums text-[34px] font-extrabold leading-none tracking-[-0.05em] text-[#111827] sm:text-[40px]">
-                  +0.38
-                </span>
 
-                <span className="mb-1 text-[10px] font-extrabold uppercase text-[#B88A44] sm:text-[11px]">
-                  m
-                </span>
+        <div className="flex items-start justify-between">
 
-              </div>
+          <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#64748B] sm:text-[9px]">
+            Progression
+          </p>
 
-              <div className="mt-4 border-t border-[#111827]/10 pt-3 sm:mt-5">
-                <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
-                  2022 → 2026
-                </p>
-              </div>
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#B88A44]/10 text-sm font-bold text-[#B88A44]">
+            ↗
+          </span>
 
-            </article>
+        </div>
 
 
-            {/* PROFILE */}
-            <article className="group relative overflow-hidden rounded-[16px] border border-[#B88A44]/25 bg-gradient-to-br from-[#FFFDF8]/95 to-[#F5EBD9]/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
+        <div className="mt-4 flex items-end gap-2 sm:mt-5">
 
-              <div className="absolute right-[-30px] top-[-30px] h-24 w-24 rounded-full border border-[#B88A44]/15" />
-              <div className="absolute right-[-10px] top-[-10px] h-14 w-14 rounded-full border border-[#B88A44]/20" />
+          <span className="tabular-nums text-[34px] font-extrabold leading-none tracking-[-0.05em] text-[#111827] sm:text-[40px]">
+            +0.43
+          </span>
 
-              <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-[9px]">
-                Athlete Profile
-              </p>
+          <span className="mb-1 text-[10px] font-extrabold uppercase text-[#B88A44] sm:text-[11px]">
+            m
+          </span>
 
-              <p className="mt-4 text-xl font-extrabold leading-[1.08] tracking-[-0.03em] text-[#111827] sm:mt-5 sm:text-2xl">
-                U18
-                <br />
-                High Jump
-              </p>
+        </div>
 
-              <div className="mt-4 border-t border-[#B88A44]/20 pt-3 sm:mt-5">
-                <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
-                  Sri Lanka · Class of 2027
-                </p>
-              </div>
 
-            </article>
+        <div className="mt-4 border-t border-[#111827]/10 pt-3 sm:mt-5">
 
-          </div>
+          <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
+            2022 → 2026
+          </p>
 
+        </div>
 
-          {/* PROGRESSION CHART */}
-          <div className="relative mt-7 overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 shadow-[0_16px_50px_rgba(17,24,39,0.07)] backdrop-blur-md sm:mt-10 sm:rounded-[20px]">
+      </article>
 
-            <div className="h-[3px] w-full bg-gradient-to-r from-[#8F672F] via-[#D4AF68] to-[#8F672F]" />
 
+      {/* PROFILE */}
+      <article className="group relative overflow-hidden rounded-[16px] border border-[#B88A44]/25 bg-gradient-to-br from-[#FFFDF8]/95 to-[#F5EBD9]/95 px-4 py-4 shadow-[0_8px_30px_rgba(17,24,39,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(17,24,39,0.09)] sm:rounded-[18px] sm:px-5 sm:py-5">
 
-            <div className="flex flex-col gap-4 border-b border-[#111827]/10 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:py-5 md:px-7">
+        <div className="absolute right-[-30px] top-[-30px] h-24 w-24 rounded-full border border-[#B88A44]/15" />
 
-              <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+        <div className="absolute right-[-10px] top-[-10px] h-14 w-14 rounded-full border border-[#B88A44]/20" />
 
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#B88A44]/10 text-[#B88A44] sm:h-10 sm:w-10">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    className="h-5 w-5"
-                  >
-                    <path d="M4 18l5-6 4 3 7-9" />
-                    <path d="M16 6h4v4" />
-                  </svg>
-                </div>
 
+        <p className="text-[8px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-[9px]">
+          Athlete Profile
+        </p>
 
-                <div className="min-w-0">
 
-                  <p className="text-[7px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-[9px] sm:tracking-[0.17em]">
-                    Performance Progression
-                  </p>
+        <p className="mt-4 text-xl font-extrabold leading-[1.08] tracking-[-0.03em] text-[#111827] sm:mt-5 sm:text-2xl">
+          U18
+          <br />
+          High Jump
+        </p>
 
-                  <h3 className="mt-1 text-sm font-extrabold tracking-[-0.02em] text-[#111827] sm:text-lg md:text-xl">
-                    Competition Height Development
-                  </h3>
 
-                </div>
+        <div className="mt-4 border-t border-[#B88A44]/20 pt-3 sm:mt-5">
 
-              </div>
+          <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
+            Sri Lanka · Class of 2027
+          </p>
 
+        </div>
 
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#B88A44]/20 bg-[#F8F6F1] px-3 py-2 sm:px-3.5">
+      </article>
 
-                <span className="h-1.5 w-1.5 rounded-full bg-[#B88A44]" />
+    </div>
 
-                <span className="text-[7px] font-bold uppercase tracking-[0.1em] text-[#64748B] sm:text-[9px] sm:tracking-[0.12em]">
-                  Aug 2022 — Jul 2026
-                </span>
 
-              </div>
+    {/* =====================================================
+        PROGRESSION CHART
+    ====================================================== */}
+    <div className="relative mt-7 overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 shadow-[0_16px_50px_rgba(17,24,39,0.07)] backdrop-blur-md sm:mt-10 sm:rounded-[20px]">
 
-            </div>
+      <div className="h-[3px] w-full bg-gradient-to-r from-[#8F672F] via-[#D4AF68] to-[#8F672F]" />
 
 
-            {/* CHART - RESPONSIVE */}
-            <div className="relative overflow-x-auto bg-gradient-to-b from-white/95 to-[#FCFBF8]/95 p-3 sm:p-4 md:p-6">
+      <div className="flex flex-col gap-4 border-b border-[#111827]/10 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:py-5 md:px-7">
 
-              <div className="absolute bottom-6 left-0 top-6 w-[3px] rounded-r-full bg-[#B88A44]/25" />
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
 
-              <div className="min-w-[600px] sm:min-w-0">
-                <ProgressionChart />
-              </div>
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#B88A44]/10 text-[#B88A44] sm:h-10 sm:w-10">
 
-            </div>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              className="h-5 w-5"
+            >
+              <path d="M4 18l5-6 4 3 7-9" />
+              <path d="M16 6h4v4" />
+            </svg>
 
           </div>
 
 
-          {/* RESULTS TABLE */}
-          <div className="relative mt-6 overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 shadow-[0_16px_50px_rgba(17,24,39,0.07)] backdrop-blur-md sm:mt-8 sm:rounded-[20px]">
+          <div className="min-w-0">
 
-            <div className="h-[3px] w-full bg-gradient-to-r from-[#8F672F] via-[#D4AF68] to-[#8F672F]" />
+            <p className="text-[7px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-[9px] sm:tracking-[0.17em]">
+              Performance Progression
+            </p>
 
+            <h3 className="mt-1 text-sm font-extrabold tracking-[-0.02em] text-[#111827] sm:text-lg md:text-xl">
+              Competition Height Development
+            </h3>
 
-            <div className="flex flex-col gap-4 border-b border-[#111827]/10 px-4 py-4 sm:gap-5 sm:px-5 sm:py-5 md:flex-row md:items-center md:justify-between md:px-7">
-
-              <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#B88A44]/10 text-[#B88A44] sm:h-10 sm:w-10">
-
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    className="h-5 w-5"
-                  >
-                    <path d="M5 4h14v16H5z" />
-                    <path d="M8 8h8" />
-                    <path d="M8 12h8" />
-                    <path d="M8 16h5" />
-                  </svg>
-
-                </div>
-
-
-                <div className="min-w-0">
-
-                  <div className="flex items-center gap-2">
-                    <span className="h-[2px] w-4 shrink-0 bg-[#B88A44] sm:w-5" />
-
-                    <p className="text-[7px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-[9px] sm:tracking-[0.17em]">
-                      Competition Record
-                    </p>
-                  </div>
-
-                  <h3 className="mt-1.5 text-lg font-extrabold tracking-[-0.025em] text-[#111827] sm:text-xl md:text-2xl">
-                    Recorded Results
-                  </h3>
-
-                </div>
-              </div>
-
-
-              <p className="max-w-[360px] text-[10px] font-medium leading-5 text-[#64748B] sm:text-[11px]">
-                Competition results showing event, category, placing and
-                recorded height across Sandil&apos;s progression.
-              </p>
-
-            </div>
-
-
-            {/* RESPONSIVE TABLE */}
-            <div className="relative p-3 sm:p-4 md:p-6">
-
-              <div className="absolute left-6 right-6 top-0 h-px bg-gradient-to-r from-transparent via-[#B88A44]/50 to-transparent" />
-
-
-              <div
-                className="
-                  overflow-x-auto
-                  rounded-xl
-                  border border-[#111827]/10
-                  bg-white
-
-                  [&_table]:w-full
-                  [&_table]:border-collapse
-
-                  [&_thead]:bg-[#F8F6F1]
-
-                  [&_th]:whitespace-nowrap
-                  [&_th]:border-b
-                  [&_th]:border-[#B88A44]/25
-                  [&_th]:px-3
-                  [&_th]:py-3
-                  [&_th]:text-left
-                  [&_th]:text-[8px]
-                  [&_th]:font-extrabold
-                  [&_th]:uppercase
-                  [&_th]:tracking-[0.1em]
-                  [&_th]:text-[#8F672F]
-                  sm:[&_th]:px-4
-                  sm:[&_th]:py-3.5
-                  sm:[&_th]:text-[9px]
-
-                  [&_td]:whitespace-nowrap
-                  [&_td]:border-b
-                  [&_td]:border-[#111827]/10
-                  [&_td]:px-3
-                  [&_td]:py-3
-                  [&_td]:text-[10px]
-                  [&_td]:font-medium
-                  [&_td]:text-[#475569]
-                  sm:[&_td]:px-4
-                  sm:[&_td]:py-3.5
-                  sm:[&_td]:text-[11px]
-
-                  [&_tbody_tr]:transition-all
-                  [&_tbody_tr]:duration-200
-                  [&_tbody_tr:nth-child(even)]:bg-[#FCFBF8]
-                  [&_tbody_tr:hover]:bg-[#B88A44]/[0.06]
-                  [&_tbody_tr:hover_td:first-child]:shadow-[inset_3px_0_0_#B88A44]
-                "
-              >
-                <div className="min-w-[760px]">
-                  <ResultsTable />
-                </div>
-              </div>
-
-
-              <p className="mt-3 text-center text-[7px] font-bold uppercase tracking-[0.12em] text-[#64748B] sm:hidden">
-                Swipe table left or right →
-              </p>
-
-
-              <div className="mt-4 flex items-center gap-3 sm:mt-5">
-
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#B88A44]" />
-
-                <span className="text-[7px] font-extrabold uppercase tracking-[0.12em] text-[#64748B] sm:text-[8px] sm:tracking-[0.15em]">
-                  Competition Performance Record
-                </span>
-
-                <div className="h-px flex-1 bg-gradient-to-r from-[#B88A44]/25 to-transparent" />
-
-              </div>
-
-            </div>
           </div>
 
         </div>
-      </section>
+
+
+        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#B88A44]/20 bg-[#F8F6F1] px-3 py-2 sm:px-3.5">
+
+          <span className="h-1.5 w-1.5 rounded-full bg-[#B88A44]" />
+
+          <span className="text-[7px] font-bold uppercase tracking-[0.1em] text-[#64748B] sm:text-[9px] sm:tracking-[0.12em]">
+            Aug 2022 — 2026
+          </span>
+
+        </div>
+
+      </div>
+
+
+      {/* CHART */}
+      <div className="relative overflow-x-auto bg-gradient-to-b from-white/95 to-[#FCFBF8]/95 p-3 sm:p-4 md:p-6">
+
+        <div className="absolute bottom-6 left-0 top-6 w-[3px] rounded-r-full bg-[#B88A44]/25" />
+
+        <div className="min-w-[600px] sm:min-w-0">
+
+          <ProgressionChart />
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* =====================================================
+        RESULTS TABLE
+    ====================================================== */}
+    <div className="relative mt-6 overflow-hidden rounded-[16px] border border-[#111827]/10 bg-white/95 shadow-[0_16px_50px_rgba(17,24,39,0.07)] backdrop-blur-md sm:mt-8 sm:rounded-[20px]">
+
+      <div className="h-[3px] w-full bg-gradient-to-r from-[#8F672F] via-[#D4AF68] to-[#8F672F]" />
+
+
+      {/* TABLE HEADER */}
+      <div className="flex flex-col gap-4 border-b border-[#111827]/10 px-4 py-4 sm:gap-5 sm:px-5 sm:py-5 md:flex-row md:items-center md:justify-between md:px-7">
+
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#B88A44]/10 text-[#B88A44] sm:h-10 sm:w-10">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              className="h-5 w-5"
+            >
+              <path d="M5 4h14v16H5z" />
+              <path d="M8 8h8" />
+              <path d="M8 12h8" />
+              <path d="M8 16h5" />
+            </svg>
+
+          </div>
+
+
+          <div className="min-w-0">
+
+            <div className="flex items-center gap-2">
+
+              <span className="h-[2px] w-4 shrink-0 bg-[#B88A44] sm:w-5" />
+
+              <p className="text-[7px] font-extrabold uppercase tracking-[0.14em] text-[#B88A44] sm:text-[9px] sm:tracking-[0.17em]">
+                Competition Record
+              </p>
+
+            </div>
+
+
+            <h3 className="mt-1.5 text-lg font-extrabold tracking-[-0.025em] text-[#111827] sm:text-xl md:text-2xl">
+              Recorded Results
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <p className="max-w-[360px] text-[10px] font-medium leading-5 text-[#64748B] sm:text-[11px]">
+          Competition results showing event, category, placing and
+          recorded height across Sandil&apos;s progression.
+        </p>
+
+      </div>
+
+
+      {/* RESPONSIVE TABLE */}
+      <div className="relative p-3 sm:p-4 md:p-6">
+
+        <div className="absolute left-6 right-6 top-0 h-px bg-gradient-to-r from-transparent via-[#B88A44]/50 to-transparent" />
+
+
+        <div
+          className="
+            overflow-x-auto
+            rounded-xl
+            border border-[#111827]/10
+            bg-white
+
+            [&_table]:w-full
+            [&_table]:border-collapse
+
+            [&_thead]:bg-[#F8F6F1]
+
+            [&_th]:whitespace-nowrap
+            [&_th]:border-b
+            [&_th]:border-[#B88A44]/25
+            [&_th]:px-3
+            [&_th]:py-3
+            [&_th]:text-left
+            [&_th]:text-[8px]
+            [&_th]:font-extrabold
+            [&_th]:uppercase
+            [&_th]:tracking-[0.1em]
+            [&_th]:text-[#8F672F]
+            sm:[&_th]:px-4
+            sm:[&_th]:py-3.5
+            sm:[&_th]:text-[9px]
+
+            [&_td]:whitespace-nowrap
+            [&_td]:border-b
+            [&_td]:border-[#111827]/10
+            [&_td]:px-3
+            [&_td]:py-3
+            [&_td]:text-[10px]
+            [&_td]:font-medium
+            [&_td]:text-[#475569]
+            sm:[&_td]:px-4
+            sm:[&_td]:py-3.5
+            sm:[&_td]:text-[11px]
+
+            [&_tbody_tr]:transition-all
+            [&_tbody_tr]:duration-200
+            [&_tbody_tr:nth-child(even)]:bg-[#FCFBF8]
+            [&_tbody_tr:hover]:bg-[#B88A44]/[0.06]
+            [&_tbody_tr:hover_td:first-child]:shadow-[inset_3px_0_0_#B88A44]
+          "
+        >
+
+          <div className="min-w-[760px]">
+
+            <ResultsTable />
+
+          </div>
+
+        </div>
+
+
+        <p className="mt-3 text-center text-[7px] font-bold uppercase tracking-[0.12em] text-[#64748B] sm:hidden">
+          Swipe table left or right →
+        </p>
+
+
+        <div className="mt-4 flex items-center gap-3 sm:mt-5">
+
+          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#B88A44]" />
+
+          <span className="text-[7px] font-extrabold uppercase tracking-[0.12em] text-[#64748B] sm:text-[8px] sm:tracking-[0.15em]">
+            Competition Performance Record
+          </span>
+
+          <div className="h-px flex-1 bg-gradient-to-r from-[#B88A44]/25 to-transparent" />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* =====================================================
@@ -1584,38 +1637,123 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
           </div>
 
 
-          <div className="mt-4 flex flex-wrap gap-2">
-  {/* Transcript */}
-  
+       {/* SPORT CERTIFICATE DROPDOWN */}
+{(athlete.certificateUrl || athlete.newCertificateUrl) && (
+  <details className="group mt-6 sm:mt-7">
 
-  {/* Certificate */}
-  {athlete.certificateUrl && (
-    <a
-      href={athlete.certificateUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+    <summary
       className="
-        inline-flex items-center gap-2
+        inline-flex
+        cursor-pointer
+        list-none
+        items-center
+        gap-2
         rounded-full
         border border-[#111827]/20
         bg-transparent
         px-4 py-2.5
-        text-[8px] font-bold uppercase
+        text-[8px]
+        font-bold
+        uppercase
         tracking-[0.13em]
         text-[#111827]
-        transition-all duration-300
+        transition-all
+        duration-300
         hover:-translate-y-0.5
         hover:border-[#B88A44]
         hover:bg-[#B88A44]
         hover:text-white
         sm:text-[9px]
+        [&::-webkit-details-marker]:hidden
       "
     >
       View Sport Certificate
-      <span>→</span>
-    </a>
-  )}
-</div>
+
+      <span className="transition-transform duration-300 group-open:rotate-180">
+        ↓
+      </span>
+    </summary>
+
+
+    {/* DROPDOWN */}
+    <div
+      className="
+        mt-4
+        w-full
+        max-w-[320px]
+        overflow-hidden
+        rounded-xl
+        border border-[#111827]/10
+        bg-white
+        p-2
+        shadow-[0_12px_30px_rgba(17,24,39,0.12)]
+      "
+    >
+
+      {/* OLD CERTIFICATES */}
+      {athlete.certificateUrl && (
+        <a
+          href={athlete.certificateUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex
+            items-center
+            justify-between
+            rounded-lg
+            px-3 py-3
+            text-[9px]
+            font-bold
+            uppercase
+            tracking-[0.08em]
+            text-[#111827]
+            transition-all
+            duration-300
+            hover:bg-[#F8F6F1]
+            hover:text-[#B88A44]
+          "
+        >
+          Athletics Certificates
+
+          <span>↗</span>
+        </a>
+      )}
+
+
+      {/* NEW 2.06 M CERTIFICATE */}
+      {athlete.newCertificateUrl && (
+        <a
+          href={athlete.newCertificateUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            mt-1
+            flex
+            items-center
+            justify-between
+            rounded-lg
+            px-3 py-3
+            text-[9px]
+            font-bold
+            uppercase
+            tracking-[0.08em]
+            text-[#111827]
+            transition-all
+            duration-300
+            hover:bg-[#F8F6F1]
+            hover:text-[#B88A44]
+          "
+        >
+          2.06 m ·Personal Best · 2026
+
+          <span>↗</span>
+        </a>
+      )}
+
+    </div>
+
+  </details>
+)}
 
         </div>
 

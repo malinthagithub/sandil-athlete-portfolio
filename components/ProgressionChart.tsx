@@ -21,7 +21,7 @@ export function ProgressionChart() {
 
   return (
     <div className="result-scroll overflow-x-auto border border-line bg-white/50">
-      <svg
+      <svg 
         viewBox={`0 0 ${W} ${H}`}
         className="min-w-[900px] w-full"
         role="img"

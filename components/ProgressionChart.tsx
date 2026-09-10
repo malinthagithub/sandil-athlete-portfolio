@@ -46,7 +46,7 @@ export function ProgressionChart() {
           strokeDasharray="8 7"
         />
         <text x={W - PAD_R} y={y(TARGET) - 8} textAnchor="end" fontSize="12" fontWeight="700" fill="#9a7634">
-          TARGET 2.10 m
+          TARGET 2.05 m
         </text>
 
         <polyline points={points} fill="none" stroke="#861f32" strokeWidth="3.5" strokeLinejoin="round" strokeLinecap="round" />

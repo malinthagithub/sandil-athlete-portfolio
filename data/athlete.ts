@@ -41,7 +41,7 @@ export const athlete = {
   // DOCUMENTS
   transcriptUrl: "/media/transcript.pdf",
   certificateUrl: "/media/Sandil_Athletics_Certificates.pdf",
-  newCertificateUrl: "/media/New_Sport_Certificate.pdf",
+  newCertificateUrl: "/media/2026-09-10, 0019 Microsoft Lens.pdf",
 };
 
 

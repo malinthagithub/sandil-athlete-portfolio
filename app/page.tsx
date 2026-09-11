@@ -363,7 +363,7 @@ export default function Home() {
           {[
             ["PB", `${athlete.personalBest} / ${athlete.personalBestImperial}`],
             ["Target", athlete.target],
-            ["Class", "2027"],
+            ["University Entry", "2027 Fall"],
             ["Base", athlete.location],
           ].map(([k, v], index) => (
             <div
@@ -613,7 +613,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
 
             {
               label: "Recruit Status",
-              title: "Class of 2027",
+              title: "2027 FALL",
               detail: "International Recruit · Sri Lanka",
               icon: (
                 <svg

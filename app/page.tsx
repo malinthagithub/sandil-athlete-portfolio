@@ -619,7 +619,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="currentColor"  
                   strokeWidth="1.7"
                   className="h-5 w-5"
                 >
@@ -633,7 +633,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
           ].map((item, index) => (
             <article
               key={item.label}
-              className="
+              className=" 
                 group relative overflow-hidden
                 border border-line
                 bg-white
@@ -645,7 +645,11 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
                 sm:px-5
                 md:px-6 md:py-6
               "
-            >
+            >   name evalution number of condtion need to be check whether waht is corect line 
+            there maultiple line can be chnge in this 
+            with line issue 
+            one thing is there two resecourse line with name of condtion line to match 
+            line rescource with manupaltion resucre name need to be fix in this condtion to add what is main line 
               <div className="flex items-center justify-between gap-3">
 
                 <div className="flex min-w-0 items-center gap-3">
@@ -1128,7 +1132,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
         <div className="mt-4 border-t border-[#B88A44]/20 pt-3 sm:mt-5">
 
           <p className="text-[9px] font-semibold text-[#64748B] sm:text-[10px]">
-            Sri Lanka · Class of 2027
+            Sri Lanka · 2027 FALL
           </p>
 
         </div>
@@ -2022,7 +2026,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#D4AF68]" />
 
               <span className="text-[8px] font-bold uppercase tracking-[0.12em] text-white/55 sm:text-[9px] sm:tracking-[0.14em]">
-                PB 2.01 m · Class of 2027
+                PB 2.01 m · 2027 Fall
               </span>
 
             </div>

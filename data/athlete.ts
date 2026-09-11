@@ -14,7 +14,7 @@ export const athlete = {
 
   event: "High Jump",
   category: "U18 Sri Lanka",
-  classYear: "Class of 2027",
+  classYear: "2027 FALL",
   location: "Colombo, Sri Lanka",
 
   // CURRENT PERFORMANCE

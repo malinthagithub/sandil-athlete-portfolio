@@ -645,11 +645,7 @@ My ambition is to compete at NCAA Division I level while reading for a competiti
                 sm:px-5
                 md:px-6 md:py-6
               "
-            >   name evalution number of condtion need to be check whether waht is corect line 
-            there maultiple line can be chnge in this 
-            with line issue 
-            one thing is there two resecourse line with name of condtion line to match 
-            line rescource with manupaltion resucre name need to be fix in this condtion to add what is main line 
+            >   
               <div className="flex items-center justify-between gap-3">
 
                 <div className="flex min-w-0 items-center gap-3">
